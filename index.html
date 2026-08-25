@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>みんなでメトロノーム — 使い方</title>
+<meta name="description" content="離れていても、同じテンポを手首で感じる。連弾・アンサンブルのための触覚メトロノームの使い方。">
+<style>
+:root{
+  --purple:#7C5CBF;
+  --purple-light:#B8A6E0;
+  --purple-pale:#F3EFFB;
+  --ink:#2A2733;
+  --muted:#6B6779;
+  --line:#E4DFF0;
+  --bg:#FFFFFF;
+  --card:#FAF8FE;
+  --green:#3E9B54;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --purple:#B8A6E0;
+    --purple-light:#8E7BC4;
+    --purple-pale:#241F30;
+    --ink:#EDEAF3;
+    --muted:#A9A3BA;
+    --line:#3A3448;
+    --bg:#17141F;
+    --card:#1F1B2B;
+    --green:#6FCB86;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{
+  background:linear-gradient(160deg,var(--purple) 0%,#5B4494 100%);
+  color:#fff;
+  padding:56px 20px 48px;
+  text-align:center;
+}
+header h1{font-size:28px;margin:0 0 12px;letter-spacing:.02em}
+header p{margin:0;font-size:16px;opacity:.94}
+h2{
+  font-size:21px;
+  margin:48px 0 16px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--purple-light);
+}
+h3{font-size:17px;margin:28px 0 10px;color:var(--purple)}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 16px;padding-left:1.4em}
+li{margin-bottom:8px}
+.lead{font-size:17px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+  margin:16px 0;
+}
+.note{
+  background:var(--purple-pale);
+  border-left:4px solid var(--purple);
+  border-radius:0 8px 8px 0;
+  padding:14px 16px;
+  margin:16px 0;
+  font-size:15px;
+}
+.note strong{color:var(--purple)}
+.steps{counter-reset:s;list-style:none;padding-left:0}
+.steps li{
+  counter-increment:s;
+  position:relative;
+  padding-left:44px;
+  margin-bottom:18px;
+}
+.steps li::before{
+  content:counter(s);
+  position:absolute;left:0;top:2px;
+  width:28px;height:28px;
+  background:var(--purple);color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:600;
+}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--purple-pale);font-weight:600}
+.device-grid{display:grid;gap:14px;margin:16px 0}
+@media(min-width:600px){.device-grid{grid-template-columns:1fr 1fr}}
+.device{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--purple);
+  border-radius:8px;
+  padding:16px;
+}
+.device h3{margin-top:0}
+.tag{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  font-size:12px;padding:2px 10px;border-radius:20px;
+  margin-bottom:8px;
+}
+.ok{color:var(--green);font-weight:600}
+.key{
+  display:inline-block;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--purple-pale);
+  border:1px solid var(--purple-light);
+  border-radius:6px;
+  padding:1px 8px;
+  font-size:15px;
+}
+footer{
+  margin-top:64px;padding:28px 20px 40px;
+  border-top:1px solid var(--line);
+  text-align:center;color:var(--muted);font-size:14px;
+}
+.placeholder{
+  background:#FFF4E5;border:1px dashed #E0A64B;color:#7A5417;
+  border-radius:8px;padding:12px 14px;margin:12px 0;font-size:14px;
+}
+.btn{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  text-decoration:none;font-weight:600;font-size:15px;
+  padding:11px 22px;border-radius:24px;
+  margin:4px 0;
+}
+.btn:hover{opacity:.88}
+.small{font-size:13px;color:var(--muted);margin:6px 0 0}
+@media (prefers-color-scheme: dark){
+  .placeholder{background:#33291A;border-color:#8A6A2E;color:#E8C88A}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>みんなでメトロノーム</h1>
+  <p>離れていても、同じテンポを手首で感じる。</p>
+</header>
+
+<div class="wrap">
+
+<h2>これは何？</h2>
+<p class="lead">
+音を出さずに、<strong>振動（バイブ）でテンポを刻む</strong>メトロノームです。
+</p>
+<p>
+いちばんの特徴は、<strong>複数の人の端末が、同じ瞬間に一緒に振動する</strong>こと。
+連弾やアンサンブルで「せーの」を合わせたい時のために作りました。
+</p>
+<ul>
+  <li>音が出ないので、演奏の邪魔になりません</li>
+  <li>スマートウォッチなら、手首で直接テンポを感じられます</li>
+  <li>インターネット経由なので、<strong>離れた場所にいても一緒に使えます</strong></li>
+  <li>iPhone と Android、どちらでも参加できます</li>
+</ul>
+
+<h2>準備する</h2>
+<p>お持ちの機種によって、入れるものが変わります。</p>
+
+<div class="device-grid">
+
+  <div class="device">
+    <span class="tag">iPhone</span>
+    <h3>iPhone だけで使う</h3>
+    <p>iPhone にアプリを入れれば、それだけで参加できます。</p>
+    <p><a class="btn" href="https://testflight.apple.com/join/EtVmrxgj">TestFlight で入れる</a></p>
+    <p class="small">TestFlight アプリが必要です。上のリンクを開くと案内が出ます。</p>
+  </div>
+
+  <div class="device">
+    <span class="tag">iPhone + Apple Watch</span>
+    <h3>Apple Watch でも感じる</h3>
+    <p>
+      iPhone にアプリを入れると、Apple Watch にも自動で入ります。
+      手首で振動を感じられるようになります。
+    </p>
+    <p class="note" style="margin:10px 0 0">
+      <strong>Apple Watch は iPhone が必要です。</strong>
+      Apple Watch だけを持って出かけると参加できません。
+      iPhone を近くに置いておいてください。
+    </p>
+  </div>
+
+  <div class="device">
+    <span class="tag">Android</span>
+    <h3>Android スマホで使う</h3>
+    <p>Android スマホにアプリを入れれば、それだけで参加できます。</p>
+    <p><a class="btn" href="https://play.google.com/apps/internaltest/4701362491499380668">Google Play で入れる</a></p>
+    <p class="small">リンクを開いて「テスターになる」を押すと、Play ストアからインストールできます。</p>
+  </div>
+
+  <div class="device">
+    <span class="tag">Pixel Watch などの Wear OS</span>
+    <h3>Android のスマートウォッチで使う</h3>
+    <p>
+      Wear OS の時計は、<strong>時計だけでも参加できます</strong>。
+      スマホを持っていなくても大丈夫です。
+    </p>
+    <p><a class="btn" href="https://play.google.com/apps/internaltest/4699254209956916696">Google Play で入れる（時計版）</a></p>
+    <p class="small">
+      スマホでこのリンクを開いて「テスターになる」を押したあと、
+      <strong>時計の Play ストア</strong>で「みんなでメトロノーム」を開いてインストールしてください。
+    </p>
+  </div>
+
+</div>
+
+<div class="note">
+  <strong>時計についてのちがい</strong><br>
+  Apple Watch は iPhone とペアで動きます（iPhone が必要）。
+  Wear OS の時計は単体でも動きます。
+</div>
+
+<h2>使ってみる</h2>
+
+<h3>1人が「ルームを作る」</h3>
+<ol class="steps">
+  <li>アプリを開きます。<strong>「みんなで」</strong>が選ばれていることを確認します</li>
+  <li><strong>「ルームを作る」</strong>を押します</li>
+  <li>4桁の数字（ルームキー）が表示されます。例：<span class="key">3888</span></li>
+  <li>この数字を、一緒に演奏する人に伝えます（口頭でも、メッセージでも）</li>
+</ol>
+
+<h3>ほかの人が「参加」する</h3>
+<ol class="steps">
+  <li>アプリを開きます</li>
+  <li><strong>「参加」</strong>を押します</li>
+  <li>教えてもらった4桁の数字を入れます</li>
+  <li>入れ終わると自動でつながります。<span class="ok">「接続済み」</span>と出て、人数が表示されます</li>
+</ol>
+
+<div class="note">
+  つながると <strong>参加中の人数</strong> が表示されます。
+  ここが増えていれば、ちゃんとつながっています。
+</div>
+
+<h3>テンポを合わせる</h3>
+<p>
+  演奏を始める前に、<strong>全員が同じ BPM と拍子になっているか</strong>を確認してください。
+</p>
+<ul>
+  <li><strong>BPM</strong> … 数字の左右にある <span class="key">-10</span> <span class="key">-5</span> <span class="key">-1</span> <span class="key">+1</span> <span class="key">+5</span> <span class="key">+10</span> で変えられます</li>
+  <li><strong>拍子</strong> … <span class="key">−</span> <span class="key">＋</span> で1〜8拍に変えられます</li>
+  <li><strong>強弱</strong> … 丸をタップすると「強め・ふつう・鳴らさない」が切り替わります</li>
+</ul>
+<div class="note">
+  <strong>BPM と拍子は、それぞれの端末で同じ数字にしてください。</strong>
+  機種の組み合わせによっては自動で揃わないことがあります。
+  数字を声に出して確認しておくと確実です。
+</div>
+
+<h3>合図を出す</h3>
+<ol class="steps">
+  <li>ルームを作った人が <strong>「みんなに合図」</strong> を押します</li>
+  <li>全員の端末に「コツン・コツン・コツン」と3回振動が来ます</li>
+  <li>4回目の「の！」のあと、<strong>そのままテンポが始まります</strong></li>
+</ol>
+<p>
+  この合図は<strong>全員に同時に届きます</strong>。
+  自分の端末だけで確認したい時は「ひとりでメトロノーム」の
+  <strong>Start</strong>（合図なしですぐ始まる）か
+  <strong>合図つき</strong>（せーのを挟んでから始まる）を使ってください。
+</p>
+
+<h3>止める</h3>
+<p>再生中のボタンをもう一度押すと止まります。ルームから抜ける時は<strong>「切断」</strong>を押してください。</p>
+
+<h2>困ったときは</h2>
+
+<table>
+<tr><th>こうなった</th><th>こうしてみる</th></tr>
+<tr>
+  <td>つながらない</td>
+  <td>4桁の数字が合っているか確認してください。両方ともインターネットにつながっている必要があります（Wi-Fi かモバイル通信）。</td>
+</tr>
+<tr>
+  <td>時計が振動しない</td>
+  <td><strong>時計でアプリを開いたままにしてください。</strong>文字盤に戻っていると届かないことがあります。</td>
+</tr>
+<tr>
+  <td>Apple Watch だけ鳴らない</td>
+  <td>iPhone の画面に「自分の Watch とペアリング済み」と緑で出ているか確認してください。「応答していません」と出ている時は、Apple Watch でアプリを開き直してください。</td>
+</tr>
+<tr>
+  <td>人数が増えない</td>
+  <td>数秒待つと正しい人数になります。それでも変わらない時は、一度「切断」してから入り直してください。</td>
+</tr>
+<tr>
+  <td>合図がずれる・遅れる</td>
+  <td>電波の状態によって遅れることがあります。場所を変えるか、Wi-Fi につないでみてください。</td>
+</tr>
+<tr>
+  <td>振動が弱い / 気づかない</td>
+  <td>端末の設定でバイブレーションの強さを上げてください。時計は手首に密着させるとよく伝わります。</td>
+</tr>
+</table>
+
+<h2>いま試してもらっていること</h2>
+<p>このアプリはまだテスト中です。使ってみて、こんなことを教えてもらえると助かります。</p>
+<ul>
+  <li>合図がちゃんと揃って感じられたか</li>
+  <li>振動の強さ・長さはちょうどいいか</li>
+  <li>「せーの」の長さは、待たされすぎないか／短すぎないか</li>
+  <li>操作に迷ったところ</li>
+  <li>うまく動かなかった場面（その時の機種と状況）</li>
+</ul>
+
+</div>
+
+<footer>
+  みんなでメトロノーム<br>
+  <small>テスト版のため、予告なく仕様が変わることがあります</small>
+</footer>
+
+</body>
+</html>
