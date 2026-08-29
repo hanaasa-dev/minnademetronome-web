@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー - みんなでメトロノーム</title>
+<style>
+:root{
+  --purple:#7C5CBF;
+  --purple-light:#B8A6E0;
+  --purple-pale:#F3EFFB;
+  --ink:#2A2733;
+  --muted:#6B6779;
+  --line:#E4DFF0;
+  --bg:#FFFFFF;
+  --card:#FAF8FE;
+  --green:#3E9B54;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --purple:#B8A6E0;
+    --purple-light:#8E7BC4;
+    --purple-pale:#241F30;
+    --ink:#EDEAF3;
+    --muted:#A9A3BA;
+    --line:#3A3448;
+    --bg:#17141F;
+    --card:#1F1B2B;
+    --green:#6FCB86;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{
+  background:linear-gradient(160deg,var(--purple) 0%,#5B4494 100%);
+  color:#fff;
+  padding:56px 20px 48px;
+  text-align:center;
+}
+header h1{font-size:28px;margin:0 0 12px;letter-spacing:.02em}
+header h1 .beta{
+  display:block;
+  font-size:15px;
+  font-weight:400;
+  letter-spacing:0;
+  opacity:.88;
+  margin-top:8px;
+}
+header p{margin:0;font-size:16px;opacity:.94}
+h2{
+  font-size:21px;
+  margin:48px 0 16px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--purple-light);
+}
+h3{font-size:17px;margin:28px 0 10px;color:var(--purple)}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 16px;padding-left:1.4em}
+li{margin-bottom:8px}
+.lead{font-size:17px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+  margin:16px 0;
+}
+.note{
+  background:var(--purple-pale);
+  border-left:4px solid var(--purple);
+  border-radius:0 8px 8px 0;
+  padding:14px 16px;
+  margin:16px 0;
+  font-size:15px;
+}
+.note strong{color:var(--purple)}
+.steps{counter-reset:s;list-style:none;padding-left:0}
+.steps li{
+  counter-increment:s;
+  position:relative;
+  padding-left:44px;
+  margin-bottom:18px;
+}
+.steps li::before{
+  content:counter(s);
+  position:absolute;left:0;top:2px;
+  width:28px;height:28px;
+  background:var(--purple);color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:600;
+}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--purple-pale);font-weight:600}
+.device-grid{display:grid;gap:14px;margin:16px 0}
+@media(min-width:600px){.device-grid{grid-template-columns:1fr 1fr}}
+.device{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--purple);
+  border-radius:8px;
+  padding:16px;
+}
+.device h3{margin-top:0}
+.tag{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  font-size:12px;padding:2px 10px;border-radius:20px;
+  margin-bottom:8px;
+}
+.ok{color:var(--green);font-weight:600}
+.key{
+  display:inline-block;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--purple-pale);
+  border:1px solid var(--purple-light);
+  border-radius:6px;
+  padding:1px 8px;
+  font-size:15px;
+}
+footer{
+  margin-top:64px;padding:28px 20px 40px;
+  border-top:1px solid var(--line);
+  text-align:center;color:var(--muted);font-size:14px;
+}
+.placeholder{
+  background:#FFF4E5;border:1px dashed #E0A64B;color:#7A5417;
+  border-radius:8px;padding:12px 14px;margin:12px 0;font-size:14px;
+}
+.btn{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  text-decoration:none;font-weight:600;font-size:15px;
+  padding:11px 22px;border-radius:24px;
+  margin:4px 0;
+}
+.btn:hover{opacity:.88}
+.small{font-size:13px;color:var(--muted);margin:6px 0 0}
+@media (prefers-color-scheme: dark){
+  .placeholder{background:#33291A;border-color:#8A6A2E;color:#E8C88A}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>プライバシーポリシー</h1>
+<p class="small">みんなでメトロノーム（Android / Wear OS 版）<br>最終更新日：2026年8月29日</p>
+
+<h2>1. はじめに</h2>
+<p>
+  「みんなでメトロノーム」（以下「本アプリ」）は、離れた場所にいる人どうしが同じテンポで振動を感じられるメトロノームです。
+  本ポリシーは、本アプリが扱う情報とその取り扱いについて説明します。
+</p>
+<div class="note">
+  <strong>本アプリは、アカウント登録もログインも必要ありません。</strong>
+  氏名・メールアドレス・電話番号・位置情報・連絡先・広告IDのいずれも収集しません。
+</div>
+
+<h2>2. 収集しない情報</h2>
+<p>本アプリは、次の情報を<strong>一切収集しません</strong>。</p>
+<ul>
+  <li>氏名、メールアドレス、電話番号などの個人情報</li>
+  <li>位置情報</li>
+  <li>連絡先、カレンダー、写真、ファイル</li>
+  <li>広告ID、その他の広告目的の識別子</li>
+  <li>音声（本アプリはマイクを使用しません）</li>
+  <li>利用状況の分析データ、行動履歴</li>
+</ul>
+<p>本アプリに広告は含まれていません。アプリ内課金もありません。</p>
+
+<h2>3. ほかの人と繋がるときに送られる情報</h2>
+<p>本アプリには、ほかの人と同じテンポで動かすための繋ぎ方が2つあります。送られる情報はどちらも<strong>演奏に必要なものだけ</strong>です。</p>
+
+<h3>「みんなで」（インターネット経由）</h3>
+<p>ルームキー（4桁の数字）を合図に、外部サービス <strong>Ably</strong> を経由して次の情報をやり取りします。</p>
+<ul>
+  <li>ルームキー（4桁の数字。ご自身の端末が作るか、入力したもの）</li>
+  <li>テンポ（BPM）、拍子の数、どの拍を強く鳴らすかの設定</li>
+  <li>演奏を始める時刻</li>
+  <li>ホストか参加者かの区別</li>
+  <li><strong>使い捨ての識別子</strong>（アプリが起動するたびにランダムに作り直される文字列。個人と結びつきません）</li>
+</ul>
+<p class="small">
+  ルームキーは、ご自身が誰かに伝えることで共有されるものです。同じルームキーを入力した人だけが同じルームに入れます。
+  ルームキーから個人を特定することはできません。
+</p>
+
+<h3>「2人で」（端末どうしの直接通信）</h3>
+<p>
+  Bluetooth と Wi-Fi を使い、<strong>近くにある端末と直接やり取りします。インターネットや外部サーバーを経由しません。</strong>
+  相手の画面に表示されるのは、お使いの<strong>端末の機種名</strong>（例：Pixel 8）だけです。
+</p>
+
+<h2>4. バグ報告について</h2>
+<p>
+  画面の「バグ報告」ボタンを押したときにだけ、不具合の調査に必要な情報が送信されます。
+  <strong>押さなければ何も送信されません。</strong>ボタンを押すと、送信される内容が画面に表示され、確認してから送るかどうかを選べます。
+</p>
+<p>送信されるのは次の情報です。</p>
+<ul>
+  <li>端末の機種名、Android のバージョン</li>
+  <li>本アプリのバージョン</li>
+  <li>端末の言語設定</li>
+  <li>そのときの接続方法（みんなで／2人で／未接続）、ルームキー、参加人数</li>
+  <li>スマートウォッチが接続されているかどうか</li>
+  <li>報告した日時</li>
+</ul>
+<p class="small">
+  氏名・メールアドレス・位置情報は含まれません。送信された内容は、外部サービス <strong>Tally</strong> のフォームを通じて
+  <strong>Google スプレッドシート</strong>に記録され、不具合の調査にのみ使用します。
+</p>
+
+<h2>5. 端末の権限について</h2>
+<table>
+  <tr><th>権限</th><th>使う理由</th></tr>
+  <tr><td>Bluetooth / Wi-Fi</td><td>「2人で」で近くの端末と直接つなぐため</td></tr>
+  <tr><td>インターネット</td><td>「みんなで」でルームを共有するため</td></tr>
+  <tr><td>バイブレーション</td><td>テンポを振動で伝えるため</td></tr>
+  <tr><td>画面を消灯させない</td><td>演奏中にテンポが止まらないようにするため</td></tr>
+  <tr><td>位置情報</td><td><strong>位置情報は取得しません。</strong>下の説明をご覧ください</td></tr>
+</table>
+<div class="note">
+  <strong>位置情報の権限について</strong><br>
+  Android 12 より前のバージョンでは、近くの端末を探す機能（Nearby Connections）を使うために、
+  OS の仕様上どうしても位置情報の権限が必要でした。本アプリはこの権限を<strong>近くの端末を探すためだけ</strong>に使い、
+  <strong>位置情報そのものを取得することも、どこかへ送ることもありません。</strong>
+  Android 13 以降ではこの権限を求めないようにしています。
+</div>
+
+<h2>6. 外部サービスについて</h2>
+<p>本アプリは、次の外部サービスを利用しています。</p>
+<ul>
+  <li><strong>Ably</strong>（Ably Real-time Ltd.）— 「みんなで」のルーム通信の中継に使用します。通信の性質上、接続元の IP アドレスなどが同社側で記録される場合があります。</li>
+  <li><strong>Tally</strong> / <strong>Google スプレッドシート</strong> — バグ報告を受け取り、記録するために使用します。</li>
+  <li><strong>Google Play</strong> — アプリの配信に使用します。インストール数などの統計が Google から提供されますが、個人を特定できる情報は含まれません。</li>
+</ul>
+<p>本アプリが、ユーザーの情報を第三者に販売・提供することはありません。</p>
+
+<h2>7. 情報の保存</h2>
+<ul>
+  <li>テンポや拍子などの設定は、<strong>お使いの端末の中にのみ保存</strong>されます。</li>
+  <li>ルーム通信でやり取りされる情報は、演奏を合わせるためにその場で使われるものです。</li>
+  <li>バグ報告の内容は、不具合の調査に必要な期間、スプレッドシートに保存します。削除をご希望の場合は、下記の連絡先までお知らせください。</li>
+</ul>
+
+<h2>8. お子様のプライバシー</h2>
+<p>
+  本アプリは13歳未満のお子様を対象としておらず、13歳未満の方から意図的に個人情報を収集することはありません。
+  そもそも本アプリは、年齢を問わず個人情報を収集していません。
+</p>
+
+<h2>9. プライバシーポリシーの変更</h2>
+<p>本ポリシーは必要に応じて更新されることがあります。変更がある場合は、本ページにて最新版を公開します。</p>
+
+<h2>10. お問い合わせ</h2>
+<p>
+  開発者：HANAASA<br>
+  メール：<a href="mailto:minnademetronome.support@gmail.com">minnademetronome.support@gmail.com</a>
+</p>
+
+<p style="margin-top:40px"><a href="./">← 使い方のページに戻る</a></p>
+
+<footer>&copy; HANAASA</footer>
+
+</div>
+</body>
+</html>
