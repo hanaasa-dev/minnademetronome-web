@@ -16,6 +16,7 @@
   --bg:#FFFFFF;
   --card:#FAF8FE;
   --green:#3E9B54;
+  --link:#5B4494;
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -28,6 +29,7 @@
     --bg:#17141F;
     --card:#1F1B2B;
     --green:#6FCB86;
+    --link:#CBB9F5;
   }
 }
 *{box-sizing:border-box}
@@ -105,6 +107,9 @@ li{margin-bottom:8px}
   border:1px solid var(--line);border-radius:8px;background:#fff;
 }
 .shot figcaption{font-size:13px;color:var(--muted);margin:6px 0 0}
+a,a:visited{color:var(--link);text-decoration:underline;text-underline-offset:2px}
+a:hover{opacity:.8}
+.note a,.note a:visited{font-weight:600}
 table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
 th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
 th{background:var(--purple-pale);font-weight:600}
@@ -214,7 +219,7 @@ footer{
   <ul>
     <li><strong>スマホ版：いま入れられます。</strong></li>
     <li><strong>ウォッチ版：入れられます。</strong>ただし
-      <strong>Android のスマホからだと「時計に入れる」ボタンが出ないこと</strong>があります。
+      <strong>Android のスマホからだと、デバイスの一覧にウォッチが出てこないこと</strong>があります（バグっぽいです）。
       その場合は<a href="#watch-pc">パソコンや iPhone から入れる方法</a>をご覧ください（数分で入ります）。</li>
   </ul>
   <p class="small" style="margin:10px 0 0">
@@ -323,7 +328,7 @@ footer{
     </p>
     <p class="note small" style="margin:10px 0 0">
       <strong>時計に入れるときは、パソコン（または iPhone / iPad）のブラウザから入れてください。</strong>
-      Android のスマホからだと、時計に入れるボタンが<strong>出てきません</strong>。
+      Android のスマホからだと、インストール先を選ぶ一覧に<strong>ウォッチが出てきません</strong>（バグっぽいです）。
       故障ではなく、Google Play 側の仕様です。<br>
       <a href="#watch-pc"><strong>→ パソコンから入れる手順を見る</strong></a>
     </p>
@@ -341,7 +346,7 @@ footer{
 
 <div class="note" id="watch-pc">
   <strong>時計に入らないときの、確実な方法（パソコン・iPhone・iPad から）</strong><br>
-  Android のスマホからだと、Google Play が「時計に入れる」ボタンを隠してしまうことがあります。
+  Android のスマホからだと、インストール先を選ぶ一覧に<strong>ウォッチが出てこない</strong>ことがあります。
   <strong>パソコンか iPhone / iPad のブラウザからなら、確実に入れられます。</strong>
   <strong>Android スマホしかお持ちでない方も、パソコンがあれば大丈夫です。</strong>
   <ol style="margin:10px 0 0;padding-left:22px;line-height:1.9">
