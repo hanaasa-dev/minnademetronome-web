@@ -99,6 +99,12 @@ li{margin-bottom:8px}
   display:flex;align-items:center;justify-content:center;
   font-size:14px;font-weight:600;
 }
+.shot{margin:10px 0 0}
+.shot img{
+  display:block;width:100%;max-width:520px;height:auto;
+  border:1px solid var(--line);border-radius:8px;background:#fff;
+}
+.shot figcaption{font-size:13px;color:var(--muted);margin:6px 0 0}
 table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
 th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
 th{background:var(--purple-pale);font-weight:600}
@@ -353,11 +359,27 @@ footer{
   <strong>Android スマホしかお持ちでない方も、パソコンがあれば大丈夫です。</strong>
   <ol style="margin:10px 0 0;padding-left:22px;line-height:1.9">
     <li><strong>パソコン / iPhone / iPad</strong> のブラウザで、下のページを開く<br>
-      <a href="https://play.google.com/store/apps/details?id=com.hanaasa.minnademetronome">Google Play のページを開く</a></li>
+      <a href="https://play.google.com/store/apps/details?id=com.hanaasa.minnademetronome">Google Play のページを開く</a><br>
+      <span class="small" style="color:var(--muted)">テスター登録ができていれば、オプトインのページは「You are a tester.（あなたはテスターです）」と表示されます</span>
+      <figure class="shot">
+        <img src="img/watch-pc-1-tester.png" alt="You are a tester. と表示されたオプトインページ">
+        <figcaption>この表示が出ていればOKです</figcaption>
+      </figure>
+    </li>
     <li><strong>時計と同じ Google アカウントでログインしているか</strong>を確認する<br>
       <span class="small" style="color:var(--muted)">画面の右上のアイコンで確認できます</span></li>
-    <li>「<strong>Install on more devices</strong>（他のデバイスにインストール）」を押す</li>
-    <li>「<strong>Choose a device</strong>（デバイスを選択）」から<strong>お使いの時計</strong>を選ぶ</li>
+    <li>「<strong>Install on more devices</strong>（他のデバイスにインストール）」を押す
+      <figure class="shot">
+        <img src="img/watch-pc-2-install.png" alt="Google Play のページに出る「Install on more devices」ボタン">
+        <figcaption>この緑のボタンです</figcaption>
+      </figure>
+    </li>
+    <li>「<strong>Choose a device</strong>（デバイスを選択）」から<strong>お使いの時計</strong>を選ぶ
+      <figure class="shot">
+        <img src="img/watch-pc-3-device.png" alt="Choose a device の一覧に時計が並んでいるところ">
+        <figcaption>時計（Pixel Watch など）を選びます</figcaption>
+      </figure>
+    </li>
     <li>「<strong>Install</strong>」を押す</li>
     <li><strong>数分待つ</strong>と、時計にアプリが入ります</li>
   </ol>
