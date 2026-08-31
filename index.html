@@ -185,7 +185,7 @@ footer{
     <tr><th>使うもの</th><th>最新版</th><th>入れ直し方</th></tr>
     <tr><td>iPhone / Apple Watch</td><td><strong>1.0 (19)</strong></td><td>TestFlight アプリを開いて「アップデート」</td></tr>
     <tr><td>Android スマホ</td><td><strong>build 24</strong></td><td>Play ストアでこのアプリを開いて「更新」</td></tr>
-    <tr><td>Android のスマートウォッチ</td><td><strong>build 27</strong></td><td>同じリンクから（時計に届くまで時間がかかることがあります）（<a href="#wear">下を見る</a>）</td></tr>
+    <tr><td>Android のスマートウォッチ</td><td><strong>build 27</strong></td><td>同じリンクから（入らない時は<a href="#watch-pc">こちら</a>）</td></tr>
   </table>
   <p class="small">
     <strong>いま入っている版の見かた：</strong>
@@ -220,7 +220,9 @@ footer{
   <strong>いまの配信状況</strong>
   <ul>
     <li><strong>スマホ版：いま入れられます。</strong></li>
-    <li><strong>ウォッチ版：配信が始まりました。</strong>ただし時計に届くまで時間がかかることがあります。すぐ出てこなくても正常です。</li>
+    <li><strong>ウォッチ版：入れられます。</strong>ただし
+      <strong>Android のスマホからだと「時計に入れる」ボタンが出ないこと</strong>があります。
+      その場合は<a href="#watch-pc">パソコンや iPhone から入れる方法</a>をご覧ください（数分で入ります）。</li>
   </ul>
   <p class="small" style="margin:10px 0 0">
     <strong>すでに前のテスト版を入れている方は、この順番でお願いします。</strong>
@@ -235,6 +237,16 @@ footer{
       「みんなでメトロノーム（早期アクセス）」→ 切り替わりました</span></li>
     <li>切り替わったら<strong>一度アンインストール</strong>して、そのまま<strong>インストール</strong></li>
   </ol>
+</div>
+
+<div class="note">
+  <strong>お願い：テスターの登録は 14 日間そのままにしてください 🙏</strong><br>
+  正式に公開するために、Google から<strong>「14 日間つづけてテスターがいること」</strong>という条件が出ています。
+  <ul>
+    <li><strong>「テスターの登録をやめる（Leave the program）」は押さないでください</strong></li>
+    <li>アプリを消してしまっても、<strong>登録さえ残っていれば大丈夫</strong>です</li>
+    <li>期間中に一度でも触っていただけると、とても助かります</li>
+  </ul>
 </div>
 
 <div class="device-grid">
@@ -286,9 +298,18 @@ footer{
     <h3>Android スマホで使う</h3>
     <p>Android スマホにアプリを入れれば、それだけで参加できます。</p>
     <p><a class="btn" href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">Google Play で入れる</a></p>
+    <ol class="small" style="margin:8px 0 0;padding-left:22px;line-height:1.9">
+      <li>上のボタンを開いて、「<strong>テスターになる</strong>」を押す<br>
+        <span style="color:var(--muted)">「あなたはテスターです」と出れば登録完了</span></li>
+      <li>そのページの「<strong>Google Play でダウンロード</strong>」を開く</li>
+      <li>「<strong>インストール</strong>」を押す</li>
+      <li>アプリを開いて<strong>いちばん下までスクロール</strong>し、<code>build 24</code> と出ていれば最新</li>
+    </ol>
     <p class="small">
-      リンクを開いて「テスターになる」を押すと、Play ストアからインストールできます。<br>
-      <strong>先にメールアドレスの登録が必要です</strong>（上の案内を見てください）。
+      <strong>先にメールアドレスの登録が必要です</strong>（上の案内を見てください）。<br>
+      登録が反映されるまで<strong>1時間ほどかかることがあります</strong>。
+      すぐ入れられなくても、少し時間をおいてください。<br>
+      <strong>スマホと時計で同じ Google アカウント</strong>にしてください。別のアカウントだと、いつまでも入れられません。
     </p>
   </div>
 
@@ -305,19 +326,46 @@ footer{
     </p>
     <p><a class="btn" href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">Google Play で入れる</a></p>
     <p class="small">
-      <strong>スマホ版と同じ、このリンク1つでOKです。</strong>
-      「テスターになる」を押して参加すれば、あとは端末に合わせて届く見込みです。
-      時計版を選ぶ操作はいりません。<br>
-      ※時計とスマホは<strong>同じ Google アカウント</strong>にしてください。<br>
-      ※<strong>時計に届くまで時間がかかることがあります</strong>（上の「いまの配信状況」を参照）。<br>
-      ※テスト中のアプリは<strong>時計の Play ストアで検索しても出てきません</strong>。
+      <strong>スマホ版と同じ、このリンク1つでOKです。</strong>時計用の別のリンクはありません。
+      まずは次の手順を試してください。
     </p>
+    <ol class="small" style="margin:8px 0 0;padding-left:22px;line-height:1.9">
+      <li>上のボタンから「<strong>テスターになる</strong>」を押す（まだの方だけ）</li>
+      <li>スマホの Play ストアでアプリのページを開く</li>
+      <li><strong>下にスクロール</strong>する</li>
+      <li>「<strong>他のデバイスにもインストール</strong>」を開く</li>
+      <li>お使いの時計を選んで「<strong>インストール</strong>」</li>
+    </ol>
     <p class="small">
-      もし時計にアプリが出てこない場合は、スマホの Play ストアで「みんなでメトロノーム」を開き、
-      <strong>「他のデバイスにもインストール」</strong>からお使いの時計を選んでください。
+      <strong>4番の「他のデバイスにもインストール」が出てこないことがあります。</strong>
+      これは Android のスマホからだと起きる Google Play 側の仕様で、故障ではありません。
+      その時は<a href="#watch-pc"><strong>パソコンや iPhone から入れる方法</strong></a>で確実に入れられます。<br>
+      ※時計とスマホは<strong>同じ Google アカウント</strong>にしてください。<br>
+      ※テスト中のアプリは<strong>時計の Play ストアで検索しても出てきません</strong>。
     </p>
   </div>
 
+</div>
+
+<div class="note" id="watch-pc">
+  <strong>時計に入らないときの、確実な方法（パソコン・iPhone・iPad から）</strong><br>
+  Android のスマホからだと、Google Play が「時計に入れる」ボタンを隠してしまうことがあります。
+  <strong>パソコンか iPhone / iPad のブラウザからなら、確実に入れられます。</strong>
+  <strong>Android スマホしかお持ちでない方も、パソコンがあれば大丈夫です。</strong>
+  <ol style="margin:10px 0 0;padding-left:22px;line-height:1.9">
+    <li><strong>パソコン / iPhone / iPad</strong> のブラウザで、下のページを開く<br>
+      <a href="https://play.google.com/store/apps/details?id=com.hanaasa.minnademetronome">Google Play のページを開く</a></li>
+    <li><strong>時計と同じ Google アカウントでログインしているか</strong>を確認する<br>
+      <span class="small" style="color:var(--muted)">画面の右上のアイコンで確認できます</span></li>
+    <li>「<strong>Install on more devices</strong>（他のデバイスにインストール）」を押す</li>
+    <li>「<strong>Choose a device</strong>（デバイスを選択）」から<strong>お使いの時計</strong>を選ぶ</li>
+    <li>「<strong>Install</strong>」を押す</li>
+    <li><strong>数分待つ</strong>と、時計にアプリが入ります</li>
+  </ol>
+  <p class="small" style="margin:10px 0 0">
+    すでに入っている端末には「Your device already has this item installed」と出ます。
+    これは「入っています」という意味なので、そのままで大丈夫です。
+  </p>
 </div>
 
 <div class="note">
