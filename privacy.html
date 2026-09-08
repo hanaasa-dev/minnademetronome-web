@@ -154,7 +154,7 @@ footer{
 <div class="wrap">
 
 <h1>プライバシーポリシー</h1>
-<p class="small">みんなでメトロノーム（Android / Wear OS 版）<br>最終更新日：2026年8月30日</p>
+<p class="small">みんなでメトロノーム（Android / Wear OS / iPhone / Apple Watch 版）<br>最終更新日：2026年9月8日</p>
 
 <h2>1. はじめに</h2>
 <p>
@@ -195,10 +195,14 @@ footer{
   ルームキーから個人を特定することはできません。
 </p>
 
-<h3>「2人で」（端末どうしの直接通信）</h3>
+<h3>「2人で」（端末どうしの直接通信）<span class="small">※ Android / Wear OS 版のみ</span></h3>
 <p>
   Bluetooth と Wi-Fi を使い、<strong>近くにある端末と直接やり取りします。インターネットや外部サーバーを経由しません。</strong>
   相手の画面に表示されるのは、お使いの<strong>端末の機種名</strong>（例：Pixel 8）だけです。
+</p>
+<p class="small">
+  この機能は Android / Wear OS 版だけのものです。<strong>iPhone / Apple Watch 版にはこの機能はなく</strong>、
+  ほかの人と繋がる方法は上の「みんなで」（インターネット経由）だけです。
 </p>
 
 <h2>4. バグ報告について</h2>
@@ -208,11 +212,13 @@ footer{
 </p>
 <p>送信されるのは次の情報です。</p>
 <ul>
-  <li>端末の機種名、Android のバージョン</li>
+  <li>お使いのプラットフォーム（android／ios）</li>
+  <li>端末の機種名、OS のバージョン</li>
   <li>本アプリのバージョン</li>
   <li>端末の言語設定</li>
   <li>そのときの接続方法（みんなで／2人で／未接続）、ルームキー、参加人数</li>
   <li>スマートウォッチが接続されているかどうか</li>
+  <li>ワークアウトとして記録中かどうか（iPhone / Apple Watch 版のみ）</li>
   <li>報告した日時</li>
 </ul>
 <p class="small">
@@ -222,12 +228,13 @@ footer{
 
 <h2>5. 端末の権限について</h2>
 <table>
-  <tr><th>権限</th><th>使う理由</th></tr>
-  <tr><td>Bluetooth / Wi-Fi</td><td>「2人で」で近くの端末と直接つなぐため</td></tr>
-  <tr><td>インターネット</td><td>「みんなで」でルームを共有するため</td></tr>
-  <tr><td>バイブレーション</td><td>テンポを振動で伝えるため</td></tr>
-  <tr><td>画面を消灯させない</td><td>演奏中にテンポが止まらないようにするため</td></tr>
-  <tr><td>位置情報</td><td><strong>位置情報は取得しません。</strong>下の説明をご覧ください</td></tr>
+  <tr><th>権限</th><th>使う理由</th><th>対象</th></tr>
+  <tr><td>インターネット</td><td>「みんなで」でルームを共有するため</td><td>すべて</td></tr>
+  <tr><td>バイブレーション</td><td>テンポを振動で伝えるため</td><td>すべて</td></tr>
+  <tr><td>画面を消灯させない</td><td>演奏中にテンポが止まらないようにするため</td><td>Android / Wear OS</td></tr>
+  <tr><td>Bluetooth / Wi-Fi</td><td>「2人で」で近くの端末と直接つなぐため</td><td>Android / Wear OS</td></tr>
+  <tr><td>位置情報</td><td><strong>位置情報は取得しません。</strong>下の説明をご覧ください</td><td>Android / Wear OS</td></tr>
+  <tr><td>ヘルスケア（ワークアウト）</td><td>演奏中に手首を下ろしてもテンポが止まらないようにするため。<a href="#health">下の説明</a>をご覧ください</td><td>iPhone / Apple Watch</td></tr>
 </table>
 <div class="note">
   <strong>位置情報の権限について</strong><br>
@@ -237,12 +244,25 @@ footer{
   Android 13 以降ではこの権限を求めないようにしています。
 </div>
 
+<div class="note" id="health">
+  <strong>ヘルスケア（ワークアウト）について ※ iPhone / Apple Watch 版のみ</strong><br>
+  Apple Watch は、腕を下ろすなどして画面が見えていない間、アプリの動作を止めてしまいます。
+  演奏中にテンポが止まらないようにするため、本アプリは<strong>演奏している間だけワークアウトを開始します</strong>。
+  <ul>
+    <li><strong>書き込みのみで、読み取りは行いません。</strong>ヘルスケアに保存されている情報を本アプリが読むことはありません</li>
+    <li><strong>心拍数・消費カロリー・歩数などは一切収集しません。</strong>記録されるのは演奏の開始と終了の時刻だけです</li>
+    <li>記録は<strong>お使いの端末のヘルスケアアプリの中にのみ</strong>保存されます。外部に送信することはありません</li>
+    <li>この許可を求められたときに「許可しない」を選んでも、本アプリは使えます（ただし手首を下ろすとテンポが止まることがあります）</li>
+  </ul>
+</div>
+
 <h2>6. 外部サービスについて</h2>
 <p>本アプリは、次の外部サービスを利用しています。</p>
 <ul>
   <li><strong>Ably</strong>（Ably Real-time Ltd.）— 「みんなで」のルーム通信の中継に使用します。通信の性質上、接続元の IP アドレスなどが同社側で記録される場合があります。</li>
   <li><strong>Tally</strong> / <strong>Google スプレッドシート</strong> — バグ報告を受け取り、記録するために使用します。</li>
-  <li><strong>Google Play</strong> — アプリの配信に使用します。インストール数などの統計が Google から提供されますが、個人を特定できる情報は含まれません。</li>
+  <li><strong>Google Play</strong>（Android / Wear OS 版）— アプリの配信に使用します。インストール数などの統計が Google から提供されますが、個人を特定できる情報は含まれません。</li>
+  <li><strong>App Store</strong> / <strong>TestFlight</strong>（iPhone / Apple Watch 版）— アプリの配信に使用します。インストール数などの統計が Apple から提供されますが、個人を特定できる情報は含まれません。</li>
 </ul>
 <p>本アプリが、ユーザーの情報を第三者に販売・提供することはありません。</p>
 
@@ -250,6 +270,7 @@ footer{
 <ul>
   <li>テンポや拍子などの設定は、<strong>お使いの端末の中にのみ保存</strong>されます。</li>
   <li>ルーム通信でやり取りされる情報は、演奏を合わせるためにその場で使われるものです。</li>
+  <li>ワークアウトの記録（iPhone / Apple Watch 版）は、<strong>お使いの端末のヘルスケアアプリの中にのみ</strong>保存されます。削除はヘルスケアアプリから行えます。</li>
   <li>バグ報告の内容は、送信から<strong>90日間</strong>スプレッドシートに保存し、その後削除します。90日を待たずに削除をご希望の場合は、<a href="#delete">下の「8. データの削除をリクエストする」</a>をご覧ください。</li>
 </ul>
 
@@ -261,10 +282,11 @@ footer{
 <h3>削除できるデータ</h3>
 <p>アプリの「バグ報告」ボタンから送信された内容です。具体的には次の11項目です。</p>
 <ul>
-  <li>プラットフォーム（android）、端末の機種名、Android のバージョン</li>
+  <li>プラットフォーム（android／ios）、端末の機種名、OS のバージョン</li>
   <li>本アプリのバージョン、端末の言語設定</li>
   <li>そのときの接続方法、ルームキー、参加人数</li>
   <li>スマートウォッチの接続状態</li>
+  <li>ワークアウトとして記録中かどうか（iPhone / Apple Watch 版のみ）</li>
   <li>送信した日時</li>
 </ul>
 <p class="small">
