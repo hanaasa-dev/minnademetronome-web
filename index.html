@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>みんなでメトロノーム — 使い方</title>
-<meta name="description" content="離れていても、同じテンポを手首で感じる。連弾・アンサンブルのための触覚メトロノームの使い方。">
+<title>みんなでメトロノーム — iPhone / Apple Watch</title>
+<meta name="description" content="離れていても、同じテンポを一緒に感じる。連弾・アンサンブルのための触覚メトロノーム。iPhone / Apple Watch 版の使い方。">
 <style>
 :root{
   --purple:#7C5CBF;
@@ -165,8 +165,9 @@ footer{
 <body>
 
 <header>
-  <h1>みんなでメトロノーム<span class="beta">（テストプレイ）</span></h1>
+  <h1>みんなでメトロノーム</h1>
   <p>離れていても、同じテンポを一緒に感じる。</p>
+  <p style="margin-top:20px"><a class="btn" style="background:#fff;color:#5B4494" href="https://apps.apple.com/jp/app/id6801993680">App Store で入れる</a></p>
 </header>
 
 <div class="wrap">
@@ -180,167 +181,21 @@ footer{
 連弾やアンサンブルで出だしを合わせたい時のために作りました。
 </p>
 <ul>
-  <li><strong>振動（バイブ）でテンポを刻みます。</strong>最初は音が出ないので、演奏の邪魔になりません</li>
-  <li><strong>iPhone は音を鳴らすこともできます。</strong>拍子の「＋」の右にあるスピーカーのボタンで切り替えます（最初はオフ。Apple Watch と Android は振動だけです）</li>
-  <li>スマートウォッチなら、手首で直接テンポを感じられます</li>
+  <li><strong>振動（バイブ）でテンポを刻みます。</strong>音を出さずに使えるので、演奏の邪魔になりません</li>
+  <li><strong>音を鳴らすこともできます。</strong>拍子の「＋」の右にあるスピーカーのボタンで切り替えます（最初はオフ）</li>
+  <li><strong>Apple Watch なら、手首で直接テンポを感じられます</strong></li>
   <li>インターネット経由なので、<strong>離れた場所にいても一緒に使えます</strong></li>
-  <li>iPhone と Android、どちらでも参加できます</li>
 </ul>
 
-<h2>準備する</h2>
-<p>お持ちの機種によって、入れるものが変わります。</p>
-
-<div class="note">
-  <strong>お使いのものが最新版か、確かめてください。</strong><br>
-  古いままだと、直したはずの不具合がそのまま残っています。
-  <table>
-    <tr><th>使うもの</th><th>最新版</th><th>入れ直し方</th></tr>
-    <tr><td>iPhone / Apple Watch</td><td><strong>1.0 (43)</strong></td><td>TestFlight アプリを開いて「アップデート」</td></tr>
-    <tr><td>Android スマホ</td><td><strong>build 24</strong></td><td><a href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">このリンク</a>から開いて「更新」（<strong>検索では出てきません</strong>）</td></tr>
-    <tr><td>Android のスマートウォッチ</td><td><strong>build 29</strong></td><td><strong>パソコン・iPhone・iPad のブラウザ</strong>から（<a href="#watch-pc">手順を見る</a>）。Android スマホからは出てきません（バグっぽいです）</td></tr>
-  </table>
-  <p class="small">
-    <strong>いま入っている版の見かた：</strong>
-    Android はアプリ画面のいちばん下に <code>build 24</code> のように出ています（下までスクロールしてください）。
-    iPhone は TestFlight アプリで確認できます。<br>
-    自動で更新されるまで時間がかかることがあります。見つけたら<strong>ビシッと「更新」を押してください。</strong>
-  </p>
-</div>
-
-<div class="note">
-  <strong>Android の方へ：先にメールアドレスをご連絡ください</strong><br>
-  Google Play のテスト版は、<strong>登録された Google アカウントからしかインストールできません</strong>。
-  下のリンクを開いても「このテストに参加できません」と出る場合は、まだ登録されていません。
-  <strong>ふだん Play ストアで使っている Google アカウントのメールアドレス</strong>をご連絡ください。
-  登録すると入れられるようになります（反映まで数分〜数十分かかることがあります）。
-</div>
-
-<div class="note">
-  <strong>いまの配信状況</strong>
-  <ul>
-    <li><strong>スマホ版：インストール可能です。</strong></li>
-    <li><strong>ウォッチ版：インストール可能です。</strong>ただし
-      <strong>Android のスマホからだと、デバイスの一覧にウォッチが出てこないこと</strong>があります（バグっぽいです）。
-      その場合は<a href="#watch-pc">パソコンや iPhone から入れる方法</a>をご覧ください（数分で入ります）。</li>
-  </ul>
-  <p class="small" style="margin:10px 0 0">
-    <strong>アプリ名に「内部用」と出ている方だけ、下の手順をお願いします。</strong>
-    リンクを開いたときに「みんなでメトロノーム（<strong>内部用</strong>早期アクセス）」と表示された場合です。<br>
-    「みんなでメトロノーム（早期アクセス）」と出ている方は、<strong>そのままインストールできます</strong>（この欄は読み飛ばしてください）。
-  </p>
-  <ol class="small" style="margin:8px 0 0;padding-left:22px;line-height:1.9">
-    <li>下の「Google Play で入れる」を開いて、<strong>「テスターになる」を押す</strong><br>
-      <span style="color:var(--muted)">いま入っているアプリは、まだ消さないでください</span></li>
-    <li><strong>そのまま待つ</strong>（1時間ほどかかることがあります）</li>
-    <li>Play ストアでアプリの名前を見る<br>
-      <span style="color:var(--muted)">「みんなでメトロノーム（<strong>内部用</strong>早期アクセス）」→ まだです。もう少し待ってください<br>
-      「みんなでメトロノーム（早期アクセス）」→ 切り替わりました</span></li>
-    <li>切り替わったら「<strong>更新</strong>」を押す<br>
-      <span style="color:var(--muted)">「インストールできません」と出たら、<strong>一度アンインストール</strong>してから、そのまま<strong>インストール</strong>してください</span></li>
-  </ol>
-</div>
-
-<div class="note" id="watch-pc">
-  <strong>Wear OS の時計に入れるときは、パソコン・iPhone・iPad のブラウザから</strong><br>
-  Android のスマホからだと、インストール先を選ぶ一覧に<strong>ウォッチが出てこない</strong>ことがあります。
-  <strong>パソコンか iPhone / iPad のブラウザからなら、確実に入れられます。</strong>
-  <strong>Android スマホしかお持ちでない方も、パソコンがあれば大丈夫です。</strong>
-  <ol style="margin:10px 0 0;padding-left:22px;line-height:1.9">
-    <li><strong>パソコン / iPhone / iPad</strong> のブラウザで、下のページを開く<br>
-      <a href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">Google Play のページを開く</a><br>
-      <span class="small" style="color:var(--muted)">テスター登録ができていれば、オプトインのページは「You are a tester.（あなたはテスターです）」と表示されます</span>
-      <figure class="shot">
-        <img src="img/watch-pc-1-tester.png" alt="You are a tester. と表示されたオプトインページ">
-        <figcaption>この表示が出ていればOKです</figcaption>
-      </figure>
-    </li>
-    <li><strong>時計と同じ Google アカウントでログインしているか</strong>を確認する<br>
-      <span class="small" style="color:var(--muted)">画面の右上のアイコンで確認できます</span><br>
-      <span class="small">そのページにある
-      「If you don't have the みんなでメトロノーム app installed,
-      <strong>download it on Google Play</strong>」の
-      <strong>download it on Google Play</strong> をタップ！</span></li>
-    <li>「<strong>Install on more devices</strong>（他のデバイスにインストール）」を押す
-      <figure class="shot">
-        <img src="img/watch-pc-2-install.png" alt="Google Play のページに出る「Install on more devices」ボタン">
-        <figcaption>この緑のボタンです</figcaption>
-      </figure>
-    </li>
-    <li>「<strong>Choose a device</strong>（デバイスを選択）」から<strong>お使いの時計</strong>を選ぶ
-      <figure class="shot">
-        <img src="img/watch-pc-3-device.png" alt="Choose a device の一覧に時計が並んでいるところ">
-        <figcaption>時計（Pixel Watch など）を選びます。<br>
-        この写真はすでにインストールした後のものなので、時計が薄く表示されています（「Your device already has this item installed」＝入っています、という意味）。まだの方は選べる状態で出ます。</figcaption>
-      </figure>
-    </li>
-    <li>「<strong>Install</strong>」を押す</li>
-    <li><strong>数分待つ</strong>と、時計にアプリが入ります</li>
-  </ol>
-  <p class="small" style="margin:10px 0 0">
-    すでに入っている端末には「Your device already has this item installed」と出ます。
-    これは「入っています」という意味なので、そのままで大丈夫です。
-  </p>
-</div>
+<h2>入れる</h2>
 
 <div class="device-grid">
-
-  <div class="device">
-    <span class="tag">Android</span>
-    <h3>Android スマホで使う</h3>
-    <p>Android スマホにアプリを入れれば、それだけで参加できます。</p>
-    <p><a class="btn" href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">Google Play で入れる</a></p>
-    <ol class="small" style="margin:8px 0 0;padding-left:22px;line-height:1.9">
-      <li>上のボタンを開いて、「<strong>テスターになる</strong>」を押す<br>
-        <span style="color:var(--muted)">「あなたはテスターです」と出れば登録完了</span></li>
-      <li>そのページの「<strong>Google Play でダウンロード</strong>」を開く</li>
-      <li>「<strong>インストール</strong>」を押す</li>
-      <li>アプリを開いて<strong>いちばん下までスクロール</strong>し、<code>build 24</code> と出ていれば最新</li>
-    </ol>
-    <p class="small">
-      <strong>先にメールアドレスの登録が必要です</strong>（上の案内を見てください）。<br>
-      登録が反映されるまで<strong>1時間ほどかかることがあります</strong>。
-      すぐ入れられなくても、少し時間をおいてください。<br>
-      <strong>スマホと時計で同じ Google アカウント</strong>にしてください。別のアカウントだと、いつまでも入れられません。
-    </p>
-  </div>
-
-  <div class="device">
-    <span class="tag" id="wear">Pixel Watch などの Wear OS</span>
-    <h3>Android のスマートウォッチで使う</h3>
-    <p>
-      Wear OS の時計は、<strong>時計だけでも参加できます</strong>。
-      スマホを持っていなくても大丈夫です。
-    </p>
-    <p>
-      <strong>文字盤に登録できます（コンプリケーション）。</strong>
-      いま設定している BPM が文字盤に出て、タップするとすぐアプリが開きます。
-    </p>
-    <p><a class="btn" href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">Google Play で入れる</a></p>
-    <p class="small">
-      <strong>スマホ版と同じ、このリンク1つでOKです。</strong>時計用の別のリンクはありません。
-    </p>
-    <p class="note small" style="margin:10px 0 0">
-      <strong>時計に入れるときは、パソコン（または iPhone / iPad）のブラウザから入れてください。</strong>
-      Android のスマホからだと、インストール先を選ぶ一覧に<strong>ウォッチが出てきません</strong>（バグっぽいです）。
-      故障ではなく、Google Play 側の仕様です。<br>
-      <a href="#watch-pc"><strong>→ パソコンから入れる手順を見る</strong></a>
-    </p>
-    <ol class="small" style="margin:10px 0 0;padding-left:22px;line-height:1.9">
-      <li>上のボタンから「<strong>テスターになる</strong>」を押す（まだの方だけ）</li>
-      <li><a href="#watch-pc">パソコンのブラウザから時計にインストール</a></li>
-    </ol>
-    <p class="small">
-      ※時計とスマホは<strong>同じ Google アカウント</strong>にしてください。<br>
-      ※テスト中のアプリは<strong>時計の Play ストアで検索しても出てきません</strong>。
-    </p>
-  </div>
-
   <div class="device">
     <span class="tag">iPhone</span>
     <h3>iPhone だけで使う</h3>
     <p>iPhone にアプリを入れれば、それだけで参加できます。</p>
-    <p><a class="btn" href="https://testflight.apple.com/join/EtVmrxgj">TestFlight で入れる</a></p>
-    <p class="small">TestFlight アプリが必要です。上のリンクを開くと案内が出ます。</p>
+    <p><a class="btn" href="https://apps.apple.com/jp/app/id6801993680">App Store で入れる</a></p>
+    <p class="small">App Store で「みんなでメトロノーム」と検索しても見つかります。</p>
   </div>
 
   <div class="device">
@@ -352,49 +207,9 @@ footer{
     </p>
     <p>
       <strong>ルームを作る・参加する・合図を送る・止める、すべて Apple Watch だけでできます。</strong>
-      演奏中に iPhone を取り出す必要はありません。iPhone はポケットやカバンの中で、
-      画面を消したままで大丈夫です。
-    </p>
-    <p>
-      <strong>文字盤に登録できます（コンプリケーション）。</strong>
-      いま設定している BPM が文字盤に出て、タップするとすぐアプリが開きます。
-    </p>
-    <p class="note" style="margin:10px 0 0">
-      <strong>操作は時計だけでできますが、iPhone は近くに必要です。</strong>
-      インターネットへの接続を iPhone が受け持っているためです。
-      <strong>ポケットやカバンの中で構いません。同じ部屋にあれば大丈夫です</strong>
-      （Bluetooth または同じ Wi-Fi でつながります）。
-      iPhone を家に置いて Apple Watch だけで出かけると、参加できません。
-    </p>
-    <p class="note" style="margin:10px 0 0">
-      <strong>振動が弱いと感じたら、Apple Watch の設定を変えてください。</strong>
-      Apple Watch の 設定 → サウンドと触覚 → <strong>「触覚による通知」を「はっきり」</strong>にすると、
-      はっきり感じられるようになります。
-    </p>
-    <p class="note" style="margin:10px 0 0">
-      <strong>まず Apple Watch でアプリを開いてください。</strong>
-      開いた時点で、いま入っているルームの状況が時計にも出ます。
-      一度始めれば、そのあとは手首を下ろしたまま演奏していても鳴り続けます。<br>
-      <span class="small">Watch アプリを開かずに iPhone から合図を送ると、最初の1回だけ届きません。
-      先に Watch アプリを開いておけば、以降は届きます。</span>
+      演奏中に iPhone を取り出す必要はありません。
     </p>
   </div>
-
-</div>
-
-<div class="note">
-  <strong>時計についてのちがい</strong><br>
-  Apple Watch は iPhone とペアで動きます（iPhone が必要）。
-  Wear OS の時計は単体でも動きます。
-</div>
-
-<div class="note">
-  <strong>入れられない時計もあります</strong><br>
-  <strong>Huawei</strong>（HarmonyOS / LiteOS）、<strong>Garmin</strong>、<strong>Fitbit</strong> などは
-  Wear OS ではないため、アプリを入れられません。Apple Watch と Wear OS の時計だけが対象です。<br><br>
-  ただし、<strong>スマホだけでも問題なく参加できます</strong>。
-  手首で感じることはできませんが、合図もテンポも同じように届きます。
-  お使いの時計が対象外でも、ぜひスマホで試してみてください。
 </div>
 
 <h2>使ってみる</h2>
@@ -428,7 +243,7 @@ footer{
   <li><strong>BPM</strong> … 数字の左右にある <span class="key">-10</span> <span class="key">-5</span> <span class="key">-1</span> <span class="key">+1</span> <span class="key">+5</span> <span class="key">+10</span> で変えられます</li>
   <li><strong>拍子</strong> … <span class="key">−</span> <span class="key">＋</span> で1〜8拍に変えられます</li>
   <li><strong>強弱</strong> … 丸をタップすると「強め・ふつう・鳴らさない」が切り替わります</li>
-  <li><strong>音（iPhone のみ）</strong> … 拍子の「＋」の右にあるスピーカーのボタンで、拍の音を鳴らすかどうかを切り替えます（最初はオフ＝振動だけ）</li>
+  <li><strong>音</strong> … 拍子の「＋」の右にあるスピーカーのボタンで、拍の音を鳴らすかどうかを切り替えます（最初はオフ＝振動だけ）</li>
 </ul>
 <div class="note">
   <strong>それぞれの端末で数字を合わせる必要はありません。</strong>
@@ -452,65 +267,34 @@ footer{
 <h3>止める</h3>
 <p>鳴っている間は、ボタンが <strong>「みんなに終了」</strong> に変わります。押すと全員が止まります。ルームから抜ける時は <strong>「解散」</strong> を押してください。</p>
 
-<h2>もうひとつの繋ぎ方：「2人で」</h2>
+<h2>Apple Watch で使う</h2>
+
 <p>
-  アプリの上のほうに <strong>「2人で ｜ みんなで」</strong> という切り替えがあります。
-  ふだんは<strong>「みんなで」</strong>のままで大丈夫です。
+  <strong>文字盤に登録できます（コンプリケーション）。</strong>
+  いま設定している BPM が文字盤に出て、タップするとすぐアプリが開きます。
 </p>
 
 <div class="note">
-  <strong>「2人で」は Android 同士でだけ使えます。</strong>
-  iPhone や Apple Watch とは繋がりません。
-  iPhone の方と合わせる時は、かならず<strong>「みんなで」</strong>を使ってください。
+  <strong>操作は時計だけでできますが、iPhone は近くに必要です。</strong>
+  インターネットへの接続を iPhone が受け持っているためです。
+  <strong>ポケットやカバンの中で構いません。同じ部屋にあれば大丈夫です</strong>
+  （Bluetooth または同じ Wi-Fi でつながります）。
+  iPhone を家に置いて Apple Watch だけで出かけると、参加できません。
 </div>
-
-<h3>「みんなで」とのちがい</h3>
-<table>
-<tr><th></th><th>みんなで</th><th>2人で</th></tr>
-<tr>
-  <td>繋がる相手</td>
-  <td>iPhone・Android どちらとも</td>
-  <td><strong>Android 同士だけ</strong></td>
-</tr>
-<tr>
-  <td>距離</td>
-  <td>離れていてもOK（インターネット経由）</td>
-  <td><strong>近くにいる必要あり</strong>（同じ部屋くらい）</td>
-</tr>
-<tr>
-  <td>インターネット</td>
-  <td>必要</td>
-  <td><strong>不要</strong></td>
-</tr>
-<tr>
-  <td>ルームキー</td>
-  <td>4桁の入力が必要</td>
-  <td><strong>不要</strong>（近くの端末を自動で探します）</td>
-</tr>
-<tr>
-  <td>人数</td>
-  <td>何人でも</td>
-  <td>2人まで</td>
-</tr>
-</table>
-
-<h3>使い方</h3>
-<ol class="steps">
-  <li>両方の端末で <strong>「2人で」</strong> をタップして切り替えます</li>
-  <li>片方が <strong>「ルームを作る」</strong>、もう片方が <strong>「参加」</strong> を押します</li>
-  <li>近くにいれば自動でお互いを見つけて繋がります（<strong>数字の入力はいりません</strong>）</li>
-  <li>繋がったら、あとは「みんなで」と同じです。<strong>「みんなに合図」</strong>で全員に合図が届きます</li>
-</ol>
 
 <div class="note">
-  はじめて使う時は、Bluetooth や位置情報の許可を求められます。
-  <strong>近くの端末を探すために必要</strong>なので、許可してください。
+  <strong>振動が弱いと感じたら、Apple Watch の設定を変えてください。</strong>
+  Apple Watch の 設定 → サウンドと触覚 → <strong>「触覚による通知」を「はっきり」</strong>にすると、
+  はっきり感じられるようになります。
 </div>
 
-<p>
-  電波の届かない場所（山の中のホールなど）で使いたい時は、こちらが便利です。
-  ふだんの練習なら「みんなで」で問題ありません。
-</p>
+<div class="note">
+  <strong>まず Apple Watch でアプリを開いてください。</strong>
+  開いた時点で、いま入っているルームの状況が時計にも出ます。
+  一度始めれば、そのあとは手首を下ろしたまま演奏していても鳴り続けます。<br>
+  <span class="small">Watch アプリを開かずに iPhone から合図を送ると、最初の1回だけ届きません。
+  先に Watch アプリを開いておけば、以降は届きます。</span>
+</div>
 
 <h2>困ったときは</h2>
 
@@ -518,19 +302,11 @@ footer{
 <tr><th>こうなった</th><th>こうしてみる</th></tr>
 <tr>
   <td>音も鳴らしたい</td>
-  <td><strong>iPhone だけ、拍の音を鳴らせます。</strong>拍子の「＋」の右にあるスピーカーのボタンを押してください（最初はオフ）。消音（マナーモード）にしていても鳴ります。<br>Apple Watch と Android は振動だけです。</td>
-</tr>
-<tr>
-  <td>Play のリンクを開くと「テストに参加できません」と出る</td>
-  <td>そのメールアドレスがまだ登録されていません。Play ストアで使っている Google アカウントのメールアドレスをご連絡ください。登録後、反映まで数分〜数十分かかることがあります。</td>
+  <td>拍子の「＋」の右にあるスピーカーのボタンを押してください（最初はオフ）。消音（マナーモード）にしていても鳴ります。<br>Apple Watch は振動だけです。</td>
 </tr>
 <tr>
   <td>つながらない</td>
-  <td>4桁の数字が合っているか確認してください。両方ともインターネットにつながっている必要があります（Wi-Fi かモバイル通信）。</td>
-</tr>
-<tr>
-  <td>時計が振動しない</td>
-  <td><strong>時計でアプリを開いたままにしてください。</strong>文字盤に戻っていると届かないことがあります。</td>
+  <td>4桁の数字が合っているか確認してください。参加する人全員がインターネットにつながっている必要があります（Wi-Fi かモバイル通信）。</td>
 </tr>
 <tr>
   <td>Apple Watch だけ鳴らない</td>
@@ -538,7 +314,7 @@ footer{
 </tr>
 <tr>
   <td>Apple Watch で、手首を下ろすと止まる</td>
-  <td><strong>最新版が入っているか確認してください。</strong>古い版には、手首を下ろしても鳴り続ける仕組みが入っていません。<br>それでも止まる時は、Apple Watch でアプリを開いた状態にしてからもう一度お試しください。</td>
+  <td>Apple Watch でアプリを開いた状態にしてから、もう一度お試しください。</td>
 </tr>
 <tr>
   <td>人数が増えない</td>
@@ -549,62 +325,26 @@ footer{
   <td>電波の状態によって遅れることがあります。場所を変えるか、Wi-Fi につないでみてください。</td>
 </tr>
 <tr>
-  <td>「2人で」で相手が見つからない</td>
-  <td>Android 同士か確認してください（iPhone とは繋がりません）。両方が「2人で」に切り替わっているか、片方が「ルームを作る」・もう片方が「参加」を押しているか、Bluetooth がオンか、近くにいるか、を見てください。</td>
-</tr>
-<tr>
-  <td>文字盤のBPMをタップしてもアプリが開かない</td>
-  <td>文字盤を一度<strong>別のものに切り替えて、また戻して</strong>ください。アプリを入れ直した直後に起きることがあります。BPMの数字が出ているのにタップだけ効かない場合も、これで直ります。</td>
-</tr>
-<tr>
-  <td>振動が弱い / 気づかない</td>
-  <td>端末の設定でバイブレーションの強さを上げてください。<strong>Apple Watch は 設定 → サウンドと触覚 →「触覚による通知」を「はっきり」に。</strong>時計は手首に密着させるとよく伝わります。</td>
+  <td>文字盤の BPM をタップしてもアプリが開かない</td>
+  <td>文字盤をいったん別のものに切り替えて、また戻してみてください。それで直ることがあります。</td>
 </tr>
 </table>
 
-<h2>いま試してもらっていること</h2>
-<p>このアプリはまだテスト中です。使ってみて、こんなことを教えてもらえると助かります。</p>
-<ul>
-  <li>合図がちゃんと揃って感じられたか</li>
-  <li>振動の強さ・長さはちょうどいいか</li>
-  <li>「せ・え・の…」の長さは、待たされすぎないか／短すぎないか</li>
-  <li>操作に迷ったところ</li>
-  <li>うまく動かなかった場面（その時の機種と状況）</li>
-</ul>
-
 <div class="note">
-  <strong>うまく動かなかったときは</strong><br>
-  選ぶだけで報告できるフォームを用意しました。文字入力は必要ありません。
-  スクショや画面録画も添付できます。<br>
-  <p style="margin:10px 0 0"><a class="btn" href="https://tally.so/r/44VEeY">報告する</a></p>
-  <p class="small" style="margin:8px 0 0">
-    アプリの画面右上にある「バグ報告」からだと、端末やアプリの情報が自動で入ります。
-    そちらからのほうが、原因を早く見つけられます。
-  </p>
+  <strong>うまく動かない時は、お知らせください。</strong>
+  アプリの画面右上にある「バグ報告」から送っていただくと、
+  端末やアプリの情報が自動で入るので、原因を早く見つけられます。
+  <a href="mailto:minnademetronome.support@gmail.com">メール</a>でも受け付けています。
 </div>
 
-<p><strong>Apple Watch をお持ちの方は、特にこの2つを見てください。</strong></p>
-<ul>
-  <li><strong>手首を下ろしたまま演奏していて、鳴り続けたか</strong>（途中で止まったら、その時の状況も）</li>
-  <li><strong>「Watch アプリを開いてください」が何度も出ることがないか</strong>（出た回数や頻度を教えてください。原因を追っています）</li>
-</ul>
-
-<div class="note">
-  <strong>お願い：テスターの登録は 14 日間そのままにしてください 🙏</strong><br>
-  正式に公開するために、Google から<strong>「14 日間つづけてテスターがいること」</strong>という条件が出ています。
-  <ul>
-    <li><strong>「テスターの登録をやめる（Leave the program）」は押さないでください</strong></li>
-    <li>アプリを消してしまっても、<strong>登録さえ残っていれば大丈夫</strong>です</li>
-    <li>期間中に一度でも触っていただけると、とても助かります</li>
-  </ul>
-</div>
-
+<p class="small" style="text-align:center;margin-top:40px">
+  Android のテスト版に参加している方は <a href="tester.html">テスターの方向けのページ</a>をご覧ください。
+</p>
 
 </div>
 
 <footer>
   みんなでメトロノーム<br>
-  <small>テスト版のため、予告なく仕様が変わることがあります</small><br>
   <small><a href="privacy.html">プライバシーポリシー</a>　/　<a href="mailto:minnademetronome.support@gmail.com">お問い合わせ</a></small><br>
   <small>&copy; HANAASA</small>
 </footer>
