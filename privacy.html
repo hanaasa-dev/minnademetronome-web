@@ -154,7 +154,7 @@ footer{
 <div class="wrap">
 
 <h1>プライバシーポリシー</h1>
-<p class="small">みんなでメトロノーム（Android / Wear OS / iPhone / Apple Watch 版）<br>最終更新日：2026年9月8日</p>
+<p class="small">みんなでメトロノーム（iPhone / Apple Watch / Android / Wear OS 版）<br>最終更新日：2026年9月16日</p>
 
 <h2>1. はじめに</h2>
 <p>
@@ -232,9 +232,10 @@ footer{
   <tr><td>インターネット</td><td>「みんなで」でルームを共有するため</td><td>すべて</td></tr>
   <tr><td>バイブレーション</td><td>テンポを振動で伝えるため</td><td>すべて</td></tr>
   <tr><td>画面を消灯させない</td><td>演奏中にテンポが止まらないようにするため</td><td>Android / Wear OS</td></tr>
+  <tr><td>通知</td><td>ルームに接続している間、「ルームに接続中」とお知らせするため。<strong>下の説明をご覧ください</strong></td><td>Android / Wear OS</td></tr>
   <tr><td>Bluetooth / Wi-Fi</td><td>「2人で」で近くの端末と直接つなぐため</td><td>Android / Wear OS</td></tr>
   <tr><td>位置情報</td><td><strong>位置情報は取得しません。</strong>下の説明をご覧ください</td><td>Android / Wear OS</td></tr>
-  <tr><td>音声の再生</td><td>画面を消してもテンポが止まらないようにするため。<strong>マイクは使いません。</strong>拍の音を鳴らすかどうかは、アプリの中で切り替えられます（iPhone・最初はオフ）</td><td>iPhone / Apple Watch</td></tr>
+  <tr><td>音声の再生</td><td>画面を消してもテンポが止まらないようにするため。<strong>マイクは使いません。</strong></td><td>iPhone</td></tr>
 </table>
 <div class="note">
   <strong>位置情報の権限について</strong><br>
@@ -242,6 +243,26 @@ footer{
   OS の仕様上どうしても位置情報の権限が必要でした。本アプリはこの権限を<strong>近くの端末を探すためだけ</strong>に使い、
   <strong>位置情報そのものを取得することも、どこかへ送ることもありません。</strong>
   Android 13 以降ではこの権限を求めないようにしています。
+</div>
+<div class="note">
+  <strong>通知について（Android / Wear OS）</strong><br>
+  ルームに接続している間、<strong>「みんなでメトロノーム／ルームに接続中」</strong>という通知が出ます。
+  これは、画面を消したり他のアプリを開いたりしてもルームの接続が切れないようにするために、
+  Android が求めているものです。<strong>通知の中身はこの一行だけで、外部へ何かを送るものではありません。</strong>
+  演奏を終えてルームから抜けると消えます。
+</div>
+<div class="note">
+  <strong>Apple Watch で鳴り続ける仕組みについて</strong><br>
+  Apple Watch では、手首を下ろしてもテンポが止まらないよう、watchOS の
+  <strong>実行時間の延長（mindfulness）</strong>という仕組みを使っています。
+  <strong>ヘルスケア（HealthKit）のデータは、読み取りも書き込みも一切行いません。</strong>
+  心拍・消費カロリー・ワークアウトの記録など、健康に関する情報を扱うことはありません。
+</div>
+<div class="note">
+  <strong>拍の音について</strong><br>
+  本アプリは振動でテンポを伝えます。拍の音を鳴らすかどうかは、アプリの中で切り替えられます
+  （<strong>スマートフォンのみ・最初はオフ</strong>）。スマートウォッチは振動だけです。
+  音はアプリが端末内で作っているもので、録音や外部への送信は行いません。
 </div>
 
 <h2>6. 外部サービスについて</h2>
