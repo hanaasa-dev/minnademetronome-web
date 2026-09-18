@@ -130,6 +130,24 @@ th{background:var(--purple-pale);font-weight:600}
   margin-bottom:8px;
 }
 .ok{color:var(--green);font-weight:600}
+.dot{
+  display:inline-block;
+  width:14px; height:14px;
+  border-radius:50%;
+  vertical-align:-2px;
+  margin-right:6px;
+}
+.dot-accent{ background:#B8A6E0; }
+.dot-normal{ background:#8E8E93; }
+.dot-mute{ background:#D8D8DC; }
+.beat-list{ list-style:none; padding-left:0; margin:8px 0; }
+.beat-list li{ margin:6px 0; }
+.beat-eg{
+  background:var(--purple-pale);
+  border-radius:8px;
+  padding:10px 12px;
+  margin:10px 0 0;
+}
 .key{
   display:inline-block;
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -206,7 +224,12 @@ footer{
       手首で振動を感じられるようになります。
     </p>
     <p>
-      <strong>ルームを作る・参加する・合図を送る・止める、すべて Apple Watch だけでできます。</strong>
+      <strong>ひとりで練習する時は、Apple Watch だけで動きます。</strong>
+      iPhone を出さなくても、時計の再生ボタンでテンポを刻めます。「せえの」の合図も時計から出せます。
+    </p>
+    <p>
+      <strong>みんなで使う時も、ルームを作る・参加する・合図を送る・止めるまで、
+      Apple Watch を操作するだけです。</strong>
       演奏中に iPhone を取り出す必要はありません。
     </p>
   </div>
@@ -240,9 +263,24 @@ footer{
   テンポと拍子は、<strong>合図を出す人の端末で決めます</strong>。
 </p>
 <ul>
-  <li><strong>BPM</strong> … 数字の左右にある <span class="key">-10</span> <span class="key">-5</span> <span class="key">-1</span> <span class="key">+1</span> <span class="key">+5</span> <span class="key">+10</span> で変えられます</li>
+  <li><strong>BPM</strong> … 数字の左右にある <span class="key">-10</span> <span class="key">-5</span> <span class="key">-1</span> <span class="key">+1</span> <span class="key">+5</span> <span class="key">+10</span> で <strong>40 から 240 まで</strong>変えられます</li>
   <li><strong>拍子</strong> … <span class="key">−</span> <span class="key">＋</span> で1〜8拍に変えられます</li>
-  <li><strong>強弱</strong> … 丸をタップすると「強め・ふつう・鳴らさない」が切り替わります</li>
+  <li><strong>強弱（アクセント）</strong> … 拍の数だけ丸が並びます。<strong>丸をタップすると、色が順に変わります</strong>
+    <ul class="beat-list">
+      <li><span class="dot dot-accent"></span><strong>紫</strong> … その拍を<strong>強く</strong>鳴らす（アクセント）</li>
+      <li><span class="dot dot-normal"></span><strong>グレー</strong> … ふつうに鳴らす</li>
+      <li><span class="dot dot-mute"></span><strong>薄いグレー</strong> … <strong>鳴らさない</strong>（その拍は休み）</li>
+    </ul>
+    <div class="beat-eg">
+      <strong>たとえば</strong><br>
+      3拍子で1拍目だけ紫にすると
+      <span class="dot dot-accent"></span><span class="dot dot-normal"></span><span class="dot dot-normal"></span>
+      → <strong>ズン・タ・タ</strong><br>
+      4拍子で3拍目を薄いグレーにすると
+      <span class="dot dot-accent"></span><span class="dot dot-normal"></span><span class="dot dot-mute"></span><span class="dot dot-normal"></span>
+      → <strong>ズン・タ・（休み）・タ</strong>
+    </div>
+  </li>
   <li><strong>音</strong> … 拍子の「＋」の右にあるスピーカーのボタンで、拍の音を鳴らすかどうかを切り替えます（最初はオフ＝振動だけ）</li>
 </ul>
 <div class="note">
@@ -275,11 +313,13 @@ footer{
 </p>
 
 <div class="note">
-  <strong>操作は時計だけでできますが、iPhone は近くに必要です。</strong>
+  <strong>みんなで使う時は、iPhone との接続が必要です。</strong>
   インターネットへの接続を iPhone が受け持っているためです。
+  iPhone と接続されていない時に「ルームを作る」を押すと、時計にその案内が出ます。
   <strong>ポケットやカバンの中で構いません。同じ部屋にあれば大丈夫です</strong>
   （Bluetooth または同じ Wi-Fi でつながります）。
-  iPhone を家に置いて Apple Watch だけで出かけると、参加できません。
+  iPhone を家に置いて Apple Watch だけで出かけた時は、ルームには参加できません
+  （ひとりでのメトロノームは使えます）。
 </div>
 
 <div class="note">
@@ -302,7 +342,7 @@ footer{
 <tr><th>こうなった</th><th>こうしてみる</th></tr>
 <tr>
   <td>音も鳴らしたい</td>
-  <td>拍子の「＋」の右にあるスピーカーのボタンを押してください（最初はオフ）。消音（マナーモード）にしていても鳴ります。<br>Apple Watch は振動だけです。</td>
+  <td>拍子の「＋」の右にあるスピーカーのボタンを押してください（最初はオフ）。消音（マナーモード）にしていても鳴ります。<br>Apple Watch は、本体の消音を解除すると鳴ります。</td>
 </tr>
 <tr>
   <td>つながらない</td>
@@ -310,7 +350,7 @@ footer{
 </tr>
 <tr>
   <td>Apple Watch だけ鳴らない</td>
-  <td>iPhone の画面に「自分の Watch とペアリング済み」と緑で出ているか確認してください。<strong>「Watch アプリを開いてください」</strong>とオレンジで出ている時は、その通りに Apple Watch でアプリを開いてください。</td>
+  <td>iPhone の画面のいちばん下に「<strong>Apple Watch：接続中</strong>」と緑で出ているか確認してください。「<strong>Apple Watch：未接続</strong>」と出ている時は、Apple Watch でアプリを開いてください。</td>
 </tr>
 <tr>
   <td>Apple Watch で、手首を下ろすと止まる</td>
