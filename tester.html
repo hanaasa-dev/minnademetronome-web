@@ -130,6 +130,23 @@ th{background:var(--purple-pale);font-weight:600}
   margin-bottom:8px;
 }
 .ok{color:var(--green);font-weight:600}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:6px}
+.dot-accent{background:#B8A6E0}
+.dot-normal{background:#8E8E93}
+.dot-mute{background:#D8D8DC}
+.beat-list{list-style:none;padding-left:0;margin:8px 0}
+.beat-list li{margin:6px 0}
+.beat-eg{background:var(--purple-pale);border-radius:8px;padding:10px 12px;margin:10px 0 0}
+.quick{background:var(--card);border:2px solid var(--purple-light);border-radius:12px;padding:18px 20px;margin:24px 0}
+.quick h2{margin:0 0 10px;padding:0;border:0;font-size:19px}
+.quick ol{margin:0 0 12px}
+.quick li{margin-bottom:4px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.jump a{display:inline-block;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:20px;padding:4px 14px;font-size:14px;text-decoration:none;font-weight:600}
+.app-shot{margin:10px 0 0}
+.app-shot img{display:block;width:100%;max-width:260px;height:auto;border:1px solid var(--line);border-radius:10px}
+.app-shot.round img{max-width:180px;border:0;border-radius:50%}
+.app-shot figcaption{font-size:13px;color:var(--muted);margin:6px 0 0}
 .key{
   display:inline-block;
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -171,6 +188,23 @@ footer{
 
 <div class="wrap">
 
+<div class="quick">
+  <h2>まず試してほしいこと</h2>
+  <ol>
+    <li>1人が<strong>「部屋を作る」</strong></li>
+    <li>ほかの人が<strong>4桁のルームキーで参加</strong></li>
+    <li>部屋を作った人が<strong>「せえの！」</strong></li>
+    <li><strong>「みんなに終了」</strong>で止めて、BPMを変えてもう一度<strong>「せえの！」</strong></li>
+    <li><strong>「退出」</strong>（部屋を作った人は<strong>「解散」</strong>）</li>
+  </ol>
+  <p class="jump">
+    <a href="#install-phone">スマホに入れる</a>
+    <a href="#install-watch">Watchに入れる</a>
+    <a href="#howto">使い方</a>
+    <a href="#trouble">困ったときは</a>
+  </p>
+</div>
+
 <h2>これは何？</h2>
 <p class="lead">
 離れていても、<strong>みんなで同じテンポを一緒に感じる</strong>ためのメトロノームです。
@@ -194,12 +228,12 @@ footer{
   古いままだと、直したはずの不具合がそのまま残っています。
   <table>
     <tr><th>使うもの</th><th>最新版</th><th>入れ直し方</th></tr>
-    <tr><td>Android スマホ</td><td><strong>build 24</strong></td><td><a href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">このリンク</a>から開いて「更新」（<strong>検索では出てきません</strong>）</td></tr>
-    <tr><td>Android のスマートウォッチ</td><td><strong>build 29</strong></td><td><strong>パソコン・iPhone・iPad のブラウザ</strong>から（<a href="#watch-pc">手順を見る</a>）。Android スマホからは出てきません（バグっぽいです）</td></tr>
+    <tr><td>Android スマホ</td><td><strong>82</strong></td><td><a href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">このリンク</a>から開いて「更新」（<strong>検索では出てきません</strong>）</td></tr>
+    <tr><td>Android のスマートウォッチ</td><td><strong>83</strong></td><td><strong>パソコン・iPhone・iPad のブラウザ</strong>から（<a href="#watch-pc">手順を見る</a>）。Android スマホからは出てきません（バグっぽいです）</td></tr>
   </table>
   <p class="small">
     <strong>いま入っている版の見かた：</strong>
-    Android はアプリ画面のいちばん下に <code>build 24</code> のように出ています（下までスクロールしてください）。
+    スマホは、画面の右上の <span class="key">?</span> を押すと出る窓の「アプリ」の欄に <code>1.0 (82)</code> のように出ています。
     自動で更新されるまで時間がかかることがあります。見つけたら<strong>ビシッと「更新」を押してください。</strong>
   </p>
 </div>
@@ -281,9 +315,9 @@ footer{
 
 <div class="device-grid">
 
-  <div class="device">
+  <div class="device" id="install-phone">
     <span class="tag">Android</span>
-    <h3>Android スマホで使う</h3>
+    <h3>スマホに入れる</h3>
     <p>Android スマホにアプリを入れれば、それだけで参加できます。</p>
     <p><a class="btn" href="https://play.google.com/apps/testing/com.hanaasa.minnademetronome">Google Play で入れる</a></p>
     <ol class="small" style="margin:8px 0 0;padding-left:22px;line-height:1.9">
@@ -291,7 +325,7 @@ footer{
         <span style="color:var(--muted)">「あなたはテスターです」と出れば登録完了</span></li>
       <li>そのページの「<strong>Google Play でダウンロード</strong>」を開く</li>
       <li>「<strong>インストール</strong>」を押す</li>
-      <li>アプリを開いて<strong>いちばん下までスクロール</strong>し、<code>build 24</code> と出ていれば最新</li>
+      <li>アプリを開いて、右上の <span class="key">?</span> を押した窓に <code>1.0 (82)</code> と出ていれば最新</li>
     </ol>
     <p class="small">
       <strong>先にメールアドレスの登録が必要です</strong>（上の案内を見てください）。<br>
@@ -301,9 +335,9 @@ footer{
     </p>
   </div>
 
-  <div class="device">
+  <div class="device" id="install-watch">
     <span class="tag" id="wear">Pixel Watch などの Wear OS</span>
-    <h3>Android のスマートウォッチで使う</h3>
+    <h3>Watch（Wear OS）に入れる</h3>
     <p>
       Wear OS の時計は、<strong>時計だけでも参加できます</strong>。
       スマホを持っていなくても大丈夫です。
@@ -350,128 +384,88 @@ footer{
   お使いの時計が対象外でも、ぜひスマホで試してみてください。
 </div>
 
-<h2>使ってみる</h2>
+<h2 id="howto">使ってみる</h2>
 
-<h3>1人が「ルームを作る」</h3>
+<h3>1人が「部屋を作る」</h3>
 <ol class="steps">
-  <li>アプリを開きます。<strong>「みんなで」</strong>が選ばれていることを確認します</li>
-  <li><strong>「ルームを作る」</strong>を押します</li>
+  <li>アプリを開きます</li>
+  <li><strong>「部屋を作る」</strong>を押します</li>
   <li>4桁の数字（ルームキー）が表示されます。例：<span class="key">3888</span></li>
   <li>この数字を、一緒に演奏する人に伝えます（口頭でも、メッセージでも）</li>
 </ol>
+<figure class="app-shot"><img src="img/app-1-lobby.png" alt="スマホの最初の画面。部屋を作るボタンとルームキー4桁の欄"><figcaption>スマホの最初の画面</figcaption></figure>
+<figure class="app-shot"><img src="img/app-2-host.png" alt="部屋を作った後の画面。ルームキー 3888、2人、せえの！ボタン"><figcaption>部屋を作った人の画面（ルームキーと人数）</figcaption></figure>
 
-<h3>ほかの人が「参加」する</h3>
+<h3>ほかの人が参加する</h3>
 <ol class="steps">
   <li>アプリを開きます</li>
-  <li><strong>「参加」</strong>を押します</li>
-  <li><strong>「ルームキー4桁」</strong>と書かれた欄に、教えてもらった数字を入れます</li>
-  <li>入れ終わると自動でつながります。<span class="ok">接続済み ✓ みんなで・2人</span> のように表示されます</li>
+  <li>スマホは<strong>「ルームキー4桁」</strong>の欄に、時計は<strong>「参加」</strong>を押してから、教えてもらった数字を入れます</li>
+  <li>4桁を入れ終わると、そのまま部屋に入ります</li>
+  <li>入れると、ルームキーの横（下）に <span class="ok">2人</span> のように人数が表示されます</li>
 </ol>
+<figure class="app-shot round"><img src="img/app-3-watch-guest.png" alt="Watchで参加した画面。ルームキー 3888 2人、合図を待っています、退出"><figcaption>Watchで参加した人の画面</figcaption></figure>
 
 <div class="note">
-  つながると <strong>いま何人いるか</strong> が表示されます。
+  つながると <strong>いま何人いるか</strong> が表示されます（部屋を作った人を含めた人数です）。
   ここが増えていれば、ちゃんとつながっています。
+  iPhone・Apple Watch の人とも、同じ部屋に入れます。
 </div>
 
 <h3>テンポを決める</h3>
 <p>
-  テンポと拍子は、<strong>合図を出す人の端末で決めます</strong>。
+  テンポと拍子は、<strong>部屋を作った人が決めます</strong>。
+  参加した人の画面には、いまのテンポ（BPM の数字）だけが表示されます。
 </p>
 <ul>
-  <li><strong>BPM</strong> … 数字の左右にある <span class="key">-10</span> <span class="key">-5</span> <span class="key">-1</span> <span class="key">+1</span> <span class="key">+5</span> <span class="key">+10</span> で変えられます</li>
-  <li><strong>拍子</strong> … <span class="key">−</span> <span class="key">＋</span> で1〜8拍に変えられます</li>
-  <li><strong>強弱</strong> … 丸をタップすると「強め・ふつう・鳴らさない」が切り替わります</li>
-  <li><strong>音（iPhone のみ）</strong> … 拍子の「＋」の右にあるスピーカーのボタンで、拍の音を鳴らすかどうかを切り替えます（最初はオフ＝振動だけ）</li>
+  <li><strong>BPM</strong> … 数字の左右にある <span class="key">-10</span> <span class="key">-5</span> <span class="key">-1</span> <span class="key">+1</span> <span class="key">+5</span> <span class="key">+10</span> で <strong>40 から 240 まで</strong>変えられます</li>
+  <li><strong>拍子</strong> … <span class="key">−</span> <span class="key">＋</span> で1〜8拍に変えられます。時計は<strong>「拍子・アクセント」</strong>を押すと、変える画面が開きます</li>
+  <li><strong>強弱（アクセント）</strong> … 拍の数だけ丸が並びます。<strong>丸をタップすると、色が順に変わります</strong>
+    <ul class="beat-list">
+      <li><span class="dot dot-accent"></span><strong>紫</strong> … その拍を<strong>強く</strong>鳴らす（アクセント）</li>
+      <li><span class="dot dot-normal"></span><strong>グレー</strong> … ふつうに鳴らす</li>
+      <li><span class="dot dot-mute"></span><strong>薄いグレー</strong> … <strong>鳴らさない</strong>（その拍は休み）</li>
+    </ul>
+  </li>
+  <li><strong>時計の拍子・アクセント</strong> … 「拍子・アクセント」の画面で、−＋と丸をそのまま押して変えます。終わったら「閉じる」
+    <figure class="app-shot round"><img src="img/app-6-watch-beat.png" alt="Watchの拍子・アクセントの画面。拍子8、丸が2段、閉じるボタン"><figcaption>Watchの「拍子・アクセント」の画面</figcaption></figure>
+  </li>
+  <li><strong>音（スマホのみ）</strong> … BPM の数字の下にあるスピーカーのボタンで、拍の音を鳴らすかどうかを切り替えます（最初はオフ＝振動だけ）</li>
 </ul>
 <div class="note">
-  <strong>それぞれの端末で数字を合わせる必要はありません。</strong>
-  「みんなに合図」を押すと、その人の BPM・拍子・強弱がみんなの端末に届き、
-  全員が同じ設定になります。
+  <strong>みんなで鳴らしている間は、テンポと拍子を変えられません。</strong>
+  変えたい時は、いったん「みんなに終了」で止めてから変えて、もう一度合図を出してください。
+  ひとりで使う時は、鳴らしている最中でも変えられます。
 </div>
 
 <h3>合図を出す</h3>
 <ol class="steps">
-  <li>ルームを作った人が <strong>「みんなに合図」</strong> を押します</li>
-  <li>全員の端末に <strong>「たん、たん、たたん」</strong>（せ・え・の…）と振動が来ます</li>
+  <li>部屋を作った人が <strong>「せえの！」</strong> を押します（参加した人の画面には「合図を待っています」と出ます）</li>
+  <li>全員の端末に <strong>「たん、たん、たたん」</strong>と振動が来て、画面の灯が1つずつ点きます</li>
   <li>最後の「たん」のあと、<strong>そのままテンポが始まります</strong></li>
 </ol>
+<figure class="app-shot"><img src="img/app-4-cue.png" alt="せえの！の合図中。灯が順に点いている"><figcaption>合図中は、振動に合わせて灯が1つずつ点きます</figcaption></figure>
 <p>
   この合図は<strong>全員に同時に届きます</strong>。
   自分の端末だけで確認したい時は「ひとりでメトロノーム」の
   <strong>Start</strong>（合図なしですぐ始まる）か
-  <strong>合図つき</strong>（「せ・え・の…」を挟んでから始まる）を使ってください。
+  <strong>合図つき</strong>（「せえの！」の合図を挟んでから始まる）を使ってください。
+  時計では、少し下へ動かすと出てきます。
 </p>
 
 <h3>止める</h3>
-<p>鳴っている間は、ボタンが <strong>「みんなに終了」</strong> に変わります。押すと全員が止まります。ルームから抜ける時は <strong>「解散」</strong> を押してください。</p>
+<p>鳴っている間は、部屋を作った人のボタンが <strong>「みんなに終了」</strong> に変わります。押すと全員が止まります。</p>
+<figure class="app-shot"><img src="img/app-5-play.png" alt="鳴っている間の画面。みんなに終了ボタン"><figcaption>鳴っている間（部屋を作った人）</figcaption></figure>
+<p>部屋から抜ける時は、部屋を作った人は <strong>「解散」</strong>、参加した人は <strong>「退出」</strong> を押してください（部屋を作った人の「解散」は、止めた後に出ます）。
+抜けた後は「解散しました」「退出しました」と出ます。部屋を作った人が抜けると、参加していた人の画面には「ルームが終了しました」と出ます。</p>
 
-<h2>もうひとつの繋ぎ方：「2人で」</h2>
-<p>
-  アプリの上のほうに <strong>「2人で ｜ みんなで」</strong> という切り替えがあります。
-  ふだんは<strong>「みんなで」</strong>のままで大丈夫です。
-</p>
-
-<div class="note">
-  <strong>「2人で」は Android 同士でだけ使えます。</strong>
-  iPhone や Apple Watch とは繋がりません。
-  iPhone の方と合わせる時は、かならず<strong>「みんなで」</strong>を使ってください。
-</div>
-
-<h3>「みんなで」とのちがい</h3>
-<table>
-<tr><th></th><th>みんなで</th><th>2人で</th></tr>
-<tr>
-  <td>繋がる相手</td>
-  <td>iPhone・Android どちらとも</td>
-  <td><strong>Android 同士だけ</strong></td>
-</tr>
-<tr>
-  <td>距離</td>
-  <td>離れていてもOK（インターネット経由）</td>
-  <td><strong>近くにいる必要あり</strong>（同じ部屋くらい）</td>
-</tr>
-<tr>
-  <td>インターネット</td>
-  <td>必要</td>
-  <td><strong>不要</strong></td>
-</tr>
-<tr>
-  <td>ルームキー</td>
-  <td>4桁の入力が必要</td>
-  <td><strong>不要</strong>（近くの端末を自動で探します）</td>
-</tr>
-<tr>
-  <td>人数</td>
-  <td>何人でも</td>
-  <td>2人まで</td>
-</tr>
-</table>
-
-<h3>使い方</h3>
-<ol class="steps">
-  <li>両方の端末で <strong>「2人で」</strong> をタップして切り替えます</li>
-  <li>片方が <strong>「ルームを作る」</strong>、もう片方が <strong>「参加」</strong> を押します</li>
-  <li>近くにいれば自動でお互いを見つけて繋がります（<strong>数字の入力はいりません</strong>）</li>
-  <li>繋がったら、あとは「みんなで」と同じです。<strong>「みんなに合図」</strong>で全員に合図が届きます</li>
-</ol>
-
-<div class="note">
-  はじめて使う時は、Bluetooth や位置情報の許可を求められます。
-  <strong>近くの端末を探すために必要</strong>なので、許可してください。
-</div>
-
-<p>
-  電波の届かない場所（山の中のホールなど）で使いたい時は、こちらが便利です。
-  ふだんの練習なら「みんなで」で問題ありません。
-</p>
-
-<h2>困ったときは</h2>
+<h2 id="trouble">困ったときは</h2>
+<p><strong>アプリ右上の <span class="key">?</span> からお問い合わせできます。</strong>端末やアプリの情報が自動で入るので、そのまま送ってください。</p>
 
 <table>
 <tr><th>こうなった</th><th>こうしてみる</th></tr>
 <tr>
   <td>音も鳴らしたい</td>
-  <td><strong>Android は振動だけです。</strong>音を鳴らす切り替えは、いまのところ Android 版にはありません。</td>
+  <td>スマホは、BPM の数字の下にあるスピーカーのボタンを押してください（最初はオフ）。時計は振動だけです。</td>
 </tr>
 <tr>
   <td>Play のリンクを開くと「テストに参加できません」と出る</td>
@@ -491,15 +485,15 @@ footer{
 </tr>
 <tr>
   <td>人数が増えない</td>
-  <td>数秒待つと正しい人数になります。それでも変わらない時は、一度「解散」してから入り直してください。</td>
+  <td>数秒待つと正しい人数になります。それでも変わらない時は、一度部屋を出て（「解散」または「退出」）から入り直してください。</td>
 </tr>
 <tr>
   <td>合図がずれる・遅れる</td>
   <td>電波の状態によって遅れることがあります。場所を変えるか、Wi-Fi につないでみてください。</td>
 </tr>
 <tr>
-  <td>「2人で」で相手が見つからない</td>
-  <td>Android 同士か確認してください（iPhone とは繋がりません）。両方が「2人で」に切り替わっているか、片方が「ルームを作る」・もう片方が「参加」を押しているか、Bluetooth がオンか、近くにいるか、を見てください。</td>
+  <td>25分たったら止まった</td>
+  <td>鳴らしっぱなしを防ぐため、25分で自動で止まり「25分経ちました」と出ます。ひとりの時は「続ける」で再開できます。部屋の中では「閉じる」を押して、もう一度合図を出してください。</td>
 </tr>
 <tr>
   <td>文字盤のBPMをタップしてもアプリが開かない</td>
@@ -516,7 +510,7 @@ footer{
 <ul>
   <li>合図がちゃんと揃って感じられたか</li>
   <li>振動の強さ・長さはちょうどいいか</li>
-  <li>「せ・え・の…」の長さは、待たされすぎないか／短すぎないか</li>
+  <li>「せえの！」の合図の長さは、待たされすぎないか／短すぎないか</li>
   <li>操作に迷ったところ</li>
   <li>うまく動かなかった場面（その時の機種と状況）</li>
 </ul>
@@ -527,7 +521,7 @@ footer{
   スクショや画面録画も添付できます。<br>
   <p style="margin:10px 0 0"><a class="btn" href="https://tally.so/r/44VEeY">報告する</a></p>
   <p class="small" style="margin:8px 0 0">
-    アプリの画面右上にある「バグ報告」からだと、端末やアプリの情報が自動で入ります。
+    スマホのアプリの右上にある <span class="key">?</span> から送ると、端末やアプリの情報が自動で入ります。
     そちらからのほうが、原因を早く見つけられます。
   </p>
 </div>
