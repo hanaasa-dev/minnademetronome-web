@@ -15,6 +15,7 @@
   --bg:#FFFFFF;
   --card:#FAF8FE;
   --green:#3E9B54;
+  --link:#6D28D9;
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -27,9 +28,12 @@
     --bg:#17141F;
     --card:#1F1B2B;
     --green:#6FCB86;
+    --link:#C4B5FD;
   }
 }
 *{box-sizing:border-box}
+/* リンクの色。ダークモードで既定の青が読めなかった（2026-10-25）。訪問済みも同じ色にする */
+a:not([class]),a:not([class]):visited{color:var(--link);text-decoration:underline}
 body{
   margin:0;
   background:var(--bg);
