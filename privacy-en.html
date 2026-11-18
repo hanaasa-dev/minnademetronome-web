@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - Co-op Metronome</title>
+<style>
+:root{
+  --purple:#7C5CBF;
+  --purple-light:#B8A6E0;
+  --purple-pale:#F3EFFB;
+  --ink:#2A2733;
+  --muted:#6B6779;
+  --line:#E4DFF0;
+  --bg:#FFFFFF;
+  --card:#FAF8FE;
+  --green:#3E9B54;
+  --link:#6D28D9;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --purple:#B8A6E0;
+    --purple-light:#8E7BC4;
+    --purple-pale:#241F30;
+    --ink:#EDEAF3;
+    --muted:#A9A3BA;
+    --line:#3A3448;
+    --bg:#17141F;
+    --card:#1F1B2B;
+    --green:#6FCB86;
+    --link:#C4B5FD;
+  }
+}
+*{box-sizing:border-box}
+/* リンクの色。ダークモードで既定の青が読めなかった（2026-10-25）。訪問済みも同じ色にする */
+a:not([class]),a:not([class]):visited{color:var(--link);text-decoration:underline}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.8;
+  font-size:16px;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{
+  background:linear-gradient(160deg,var(--purple) 0%,#5B4494 100%);
+  color:#fff;
+  padding:56px 20px 48px;
+  text-align:center;
+}
+header h1{font-size:28px;margin:0 0 12px;letter-spacing:.02em}
+header h1 .beta{
+  display:block;
+  font-size:15px;
+  font-weight:400;
+  letter-spacing:0;
+  opacity:.88;
+  margin-top:8px;
+}
+header p{margin:0;font-size:16px;opacity:.94}
+h2{
+  font-size:21px;
+  margin:48px 0 16px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--purple-light);
+}
+h3{font-size:17px;margin:28px 0 10px;color:var(--purple)}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 16px;padding-left:1.4em}
+li{margin-bottom:8px}
+.lead{font-size:17px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+  margin:16px 0;
+}
+.note{
+  background:var(--purple-pale);
+  border-left:4px solid var(--purple);
+  border-radius:0 8px 8px 0;
+  padding:14px 16px;
+  margin:16px 0;
+  font-size:15px;
+}
+.note strong{color:var(--purple)}
+.steps{counter-reset:s;list-style:none;padding-left:0}
+.steps li{
+  counter-increment:s;
+  position:relative;
+  padding-left:44px;
+  margin-bottom:18px;
+}
+.steps li::before{
+  content:counter(s);
+  position:absolute;left:0;top:2px;
+  width:28px;height:28px;
+  background:var(--purple);color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:600;
+}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--purple-pale);font-weight:600}
+.device-grid{display:grid;gap:14px;margin:16px 0}
+@media(min-width:600px){.device-grid{grid-template-columns:1fr 1fr}}
+.device{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--purple);
+  border-radius:8px;
+  padding:16px;
+}
+.device h3{margin-top:0}
+.tag{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  font-size:12px;padding:2px 10px;border-radius:20px;
+  margin-bottom:8px;
+}
+.ok{color:var(--green);font-weight:600}
+.key{
+  display:inline-block;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--purple-pale);
+  border:1px solid var(--purple-light);
+  border-radius:6px;
+  padding:1px 8px;
+  font-size:15px;
+}
+footer{
+  margin-top:64px;padding:28px 20px 40px;
+  border-top:1px solid var(--line);
+  text-align:center;color:var(--muted);font-size:14px;
+}
+.placeholder{
+  background:#FFF4E5;border:1px dashed #E0A64B;color:#7A5417;
+  border-radius:8px;padding:12px 14px;margin:12px 0;font-size:14px;
+}
+.btn{
+  display:inline-block;
+  background:var(--purple);color:#fff;
+  text-decoration:none;font-weight:600;font-size:15px;
+  padding:11px 22px;border-radius:24px;
+  margin:4px 0;
+}
+.btn:hover{opacity:.88}
+.small{font-size:13px;color:var(--muted);margin:6px 0 0}
+@media (prefers-color-scheme: dark){
+  .placeholder{background:#33291A;border-color:#8A6A2E;color:#E8C88A}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Privacy Policy</h1>
+<p class="small">Co-op Metronome (みんなでメトロノーム) for iPhone / Apple Watch / Android / Wear OS<br>Last updated: October 24, 2026</p>
+
+<h2>1. Introduction</h2>
+<p>
+  Co-op Metronome ("the App") is a metronome that lets people in different places feel the same tempo together.
+  This policy explains what information the App handles and how.
+</p>
+<div class="note">
+  <strong>The App needs no account and no sign-in.</strong>
+  It does not collect your name, email address, phone number, location, contacts, or advertising ID.
+</div>
+
+<h2>2. Information we do not collect</h2>
+<p>The App <strong>never collects</strong> the following:</p>
+<ul>
+  <li>Personal information such as your name, email address, or phone number</li>
+  <li>Location</li>
+  <li>Contacts, calendars, photos, or files</li>
+  <li>Advertising ID or any other identifier used for advertising</li>
+  <li>Audio (the App does not use the microphone)</li>
+  <li>Usage analytics or activity history</li>
+</ul>
+<p>The App contains no ads and no in-app purchases.</p>
+
+<h2>3. Information sent when you connect with others</h2>
+<p>When you play together in a room over the internet, the App keeps everyone on the same tempo. It sends <strong>only what is needed to play together</strong>.</p>
+
+<h3>Rooms (over the internet)</h3>
+<p>Using a Room Key (4 digits), the App exchanges the following through the external service <strong>Ably</strong>:</p>
+<ul>
+  <li>The Room Key (4 digits, created by your device or entered by you)</li>
+  <li>Tempo (BPM), the number of beats per bar, and which beats are accented</li>
+  <li>The time playback starts</li>
+  <li>Whether you are the host or a participant</li>
+  <li><strong>A temporary identifier</strong> (a random string created again each time the App starts; it is not linked to you)</li>
+</ul>
+<p class="small">
+  A Room Key is shared only when you tell it to someone. Only people who enter the same Room Key can join the same room.
+  A Room Key cannot be used to identify you.
+</p>
+
+<h2>4. Bug reports</h2>
+<p>
+  Information needed to investigate problems is sent only when you tap "?" (Contact) at the top right of the screen.
+  <strong>Nothing is sent unless you tap it.</strong> When you tap it, the App shows what will be sent, and you can choose whether to send it.
+</p>
+<p>The following information is sent:</p>
+<ul>
+  <li>Your platform (android / ios)</li>
+  <li>Device model and OS version</li>
+  <li>App version</li>
+  <li>Device language setting</li>
+  <li>Connection state at that moment (room / not connected), Room Key, and number of people</li>
+  <li>Whether a smartwatch is connected</li>
+  <li>Whether the metronome was playing at that moment</li>
+  <li>Date and time of the report</li>
+</ul>
+<p class="small">
+  It does not include your name, email address, or location. The report is recorded in a <strong>Google Sheets</strong> spreadsheet
+  through a form on the external service <strong>Tally</strong>, and is used only to investigate problems.
+</p>
+
+<h2>5. Device permissions</h2>
+<table>
+  <tr><th>Permission</th><th>Why it is used</th><th>Applies to</th></tr>
+  <tr><td>Internet</td><td>To share a room with others</td><td>All</td></tr>
+  <tr><td>Vibration</td><td>To deliver the tempo as vibration</td><td>All</td></tr>
+  <tr><td>Keep screen on</td><td>So the tempo does not stop while playing</td><td>Android / Wear OS</td></tr>
+  <tr><td>Notifications</td><td>To let you know you are connected while you are in a room. <strong>See the note below.</strong></td><td>Android / Wear OS</td></tr>
+  <tr><td>Audio playback</td><td>So the tempo does not stop when the screen turns off. <strong>The microphone is not used.</strong></td><td>iPhone</td></tr>
+</table>
+<div class="note">
+  <strong>About the notification (Android / Wear OS)</strong><br>
+  While you are connected to a room, a notification appears saying <strong>that you are connected to a room</strong>.
+  Android requires it so the room connection is not cut when you turn off the screen or open another app.
+  <strong>The notification is just this one line and does not send anything.</strong>
+  It disappears when you finish playing and leave the room.
+</div>
+<div class="note">
+  <strong>How the App keeps running on Apple Watch</strong><br>
+  On Apple Watch, the App uses watchOS <strong>extended runtime (mindfulness)</strong>
+  so the tempo does not stop when you lower your wrist.
+</div>
+<div class="note">
+  <strong>About the click sound</strong><br>
+  The App delivers the tempo as vibration. You can turn the click sound on or off in the App
+  (<strong>smartphone only, off by default</strong>). Smartwatches use vibration only.
+  The sound is generated on your device. Nothing is recorded or sent anywhere.
+</div>
+
+<h2>6. External services</h2>
+<p>The App uses the following external services:</p>
+<ul>
+  <li><strong>Ably</strong> (Ably Real-time Ltd.) — relays room communication. Due to the nature of the connection, information such as your IP address may be logged by Ably.</li>
+  <li><strong>Tally</strong> / <strong>Google Sheets</strong> — receive and record bug reports.</li>
+  <li><strong>Google Play</strong> (Android / Wear OS) — distributes the App. Google provides statistics such as install counts, which do not include personally identifiable information.</li>
+  <li><strong>App Store</strong> / <strong>TestFlight</strong> (iPhone / Apple Watch) — distribute the App. Apple provides statistics such as install counts, which do not include personally identifiable information.</li>
+</ul>
+<p>The App never sells or shares your information with third parties.</p>
+
+<h2>7. Data storage</h2>
+<ul>
+  <li>Settings such as tempo and beats per bar are <strong>stored on your device</strong>. If device backup is turned on (such as Google backup on Android or iCloud backup on iPhone), they may be included in the backup.</li>
+  <li>Information exchanged in a room is used only at that moment to keep everyone in time.</li>
+  <li>Bug reports are kept in the spreadsheet for <strong>90 days</strong> after they are sent, and then deleted. To have a report deleted sooner, see <a href="#delete">"8. Request data deletion" below</a>.</li>
+</ul>
+
+<h2 id="delete">8. Request data deletion</h2>
+<div class="note">
+  <strong>Co-op Metronome (developer: HANAASA) accepts requests to delete submitted bug reports at any time.</strong>
+</div>
+
+<h3>Data that can be deleted</h3>
+<p>The content sent from "?" (Contact) at the top right of the App screen. Specifically, the following 11 items:</p>
+<ul>
+  <li>Platform (android / ios), device model, OS version</li>
+  <li>App version, device language setting</li>
+  <li>Connection state at that moment, Room Key, number of people</li>
+  <li>Smartwatch connection state</li>
+  <li>Whether the metronome was playing at that moment</li>
+  <li>Date and time sent</li>
+</ul>
+<p class="small">
+  The App stores no other user data. Settings such as tempo and beats per bar are stored on your device, so
+  <strong>they are removed from your device when you uninstall the App</strong> (no request needed).
+  Settings included in a device backup can be managed in your backup settings (Google account or iCloud).
+</p>
+
+<h3>Retention period</h3>
+<p>
+  Bug reports are kept for <strong>90 days</strong> after they are sent, <strong>and then deleted</strong>.
+</p>
+
+<h3>How to request deletion</h3>
+<p>Please email us at the address below and tell us you would like your data deleted.</p>
+<p>
+  <strong><a href="mailto:minnademetronome.support@gmail.com?subject=Bug%20report%20deletion%20request">minnademetronome.support@gmail.com</a></strong>
+</p>
+<p>To help us find your report, please include:</p>
+<ul>
+  <li>The approximate date and time you sent the bug report</li>
+  <li>Your device model (for example, Pixel 8)</li>
+</ul>
+<p class="small">
+  Because there are no accounts, we use these two details to find the record. We will delete it and let you know by email when it is done.
+</p>
+
+<h2>9. Children's privacy</h2>
+<p>
+  The App is not directed at children under 13, and we do not knowingly collect personal information from children under 13.
+  The App does not collect personal information from anyone, regardless of age.
+</p>
+
+<h2>10. Changes to this policy</h2>
+<p>This policy may be updated as needed. When it changes, the latest version will be posted on this page.</p>
+
+<h2>11. Contact</h2>
+<p>
+  Developer: HANAASA<br>
+  Email: <a href="mailto:minnademetronome.support@gmail.com">minnademetronome.support@gmail.com</a>
+</p>
+
+<p style="margin-top:40px"><a href="privacy.html">日本語版はこちら（Japanese）</a></p>
+
+<footer>&copy; HANAASA</footer>
+
+</div>
+</body>
+</html>
